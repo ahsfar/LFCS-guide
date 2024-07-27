@@ -1,4 +1,5 @@
-OperationsDeployment.md
+# OperationsDeployment.md
+25% of Exam
 
 - Configure kernel parameters, persistent and non-persistent
 - Diagnose, identify, manage, and troubleshoot processes and services

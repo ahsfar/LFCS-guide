@@ -8,16 +8,6 @@
 - Troubleshoot diskspace issues
 - Work with SSL certificates
 
-<details><summary>show</summary>
-<p>
-  
-```bash
-
-
-```
-
-</p>
-</details>
 
 <details><summary>show</summary>
 <p>

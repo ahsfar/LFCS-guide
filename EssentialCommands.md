@@ -106,6 +106,41 @@ tail -500 /home/bob/textfile  > /home/bob/last
 <p>
   
 ```bash
+# https://training.linuxfoundation.org/blog/how-to-create-and-manage-archive-files-in-linux/#:~:text=To%20create%20an%20archive%20with,tar%27.
+man tar
+tar -cvf project.tar project
+cd /home/bob
+sudo tar cfP logs.tar /var/log/
+tar -zcvf project.tar.gz project
+cd /home/bob
+sudo tar czfP logs.tar.gz /var/log/
+cat /home/bob/logs.tar  > /home/bob/tar_data.txt
+tar tfP /home/bob/logs.tar > /home/bob/tar_data.txt
+tar --help
+tar --extract --file /home/bob/archive.tar.gz --directory /tmp/
+# or
+tar xf /home/bob/archive.tar.gz -C /tmp
+bash /home/bob/script.sh >&1 | tee /home/bob/output_stdout.txt
+# https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file
+sudo ./script.sh > /home/bob/output_stdout.txt
+bash /home/bob/script.sh 2>&1 | tee /home/bob/output.txt
+# or
+sudo ./script.sh > /home/bob/output.txt 2>&1
+sudo ./script.sh 2> /home/bob/output_errors.txt
+man bzip2
+bzip2 --keep /home/bob/file.txt
+tar --help
+sudo tar xf /home/bob/archive.tar.gz -C /opt
+cat /home/bob/file.txt >> /home/bob/destination.txt
+cd  /home/bob
+tar --create --file file.tar  file
+gzip --help
+gzip games.txt
+unxz --help
+unxz lfcs.txt.xz
+sort --help
+sort -du /home/bob/values.conf > /home/bob/values.sort
+sort -duf /home/bob/values.conf > /home/bob/values.sorted
 
 
 ```

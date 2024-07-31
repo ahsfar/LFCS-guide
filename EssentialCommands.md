@@ -155,6 +155,16 @@ sort -duf /home/bob/values.conf > /home/bob/values.sorted
   
 ```bash
 
+openssl req -newkey rsa:4096 -keyout priv.key -out cert.csr
+# enter password and enter for deafault options
+# https://www.geeksforgeeks.org/practical-uses-of-openssl-command-in-linux/
+openssl req -x509 -noenc -days 365 -keyout priv.key -out kodekloud.crt
+# or
+openssl req -newkey rsa:4096 -x509 -days 365 -nodes -keyout priv.key -out kodekloud.crt
+openssl x509 -noout -subject -in my.crt
+git branch --delete testing
+git log --raw
+git merge documentation
 
 ```
 

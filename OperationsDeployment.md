@@ -35,6 +35,32 @@ sudo shutdown -c
 <p>
   
 ```bash
+#!/bin/bash
+tar acf archive.tar.gz dir1
+systemctl status sshd.service | grep -i pid
+#!/bin/bash
+systemctl is-enabled sshd.service
+#!/bin/bash
+chmod 0100 /home/bob/dir8
+systemctl status sshd.service > /home/bob/service.txt
+systemctl --help
+sudo systemctl mask apache2
+# https://www.techrepublic.com/article/masked-services-linux-how-manage/
+sudo systemctl unmask apache2
+# kkloud.service -> configuration
+[Unit]
+Description=KodeKloud Service
+After=sshd.service
+
+[Service]
+ExecStart=/usr/local/bin/kkloud
+ExecStop=/usr/local/bin/kkloud --savedata
+KillMode=process
+Restart=always
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
 
 ```
 
@@ -55,6 +81,28 @@ sudo shutdown -c
 <p>
   
 ```bash
+0 16 1,15 * * echo Timesheets Due > /dev/console
+# https://docs.oracle.com/cd/E19455-01/805-7229/sysrescron-62861/index.html
+# Time Field -> Values 
+# Minute  -> 0-59 
+# Hour -> 0-23 
+# Day of month -> 1-31 
+# Month -> 1-12 
+# Day of week -> 0-6 (0 = Sunday) 
+sudo crontab -l
+sudo anacron -n -f
+at 10:00 PM (enter cmd prompt after finish ctrl + d)
+atq > /home/bob/at_jobs.txt
+atrm 1
+30 21 * * * /usr/bin/touch test_passed
+sudo nano /etc/anacrontab 
+10      5       db_cleanup      /usr/bin/touch /root/anacron_created_this
+# https://kifarunix.com/scheduling-tasks-using-anacron-in-linux-unix/
+sudo at 15:30 Aug 20 2024
+# https://www.baeldung.com/linux/at-command#:~:text=General%20Usage%20of%20the%20at,can%20use%20either%20of%20them.
+0 0 1 * * /usr/bin/touch monthly
+0 11 * * 0 /usr/bin/touch weekly
+0 6,23 * * 0 sudo systemctl restart nginx
 
 ```
 

@@ -71,6 +71,23 @@ WantedBy=multi-user.target
 <p>
   
 ```bash
+ps lax
+ps aux
+sudo renice 9 <PID>
+# (list open files by process id 1)
+sudo lsof -p 1 > /home/bob/files.txt 
+# journalctl to show systemd logs for shh and latest 20 lines with no pages all in one
+sudo journalctl --unit=ssh.service -n 20 --no-pager 
+pgrep -a rpcbind | cut -f1 -d' ' > /home/bob/pid.txt
+systemctl status ssh.service
+sudo kill -SIGHUP 1399
+sudo grep -r --text 'reboot' /var/log/ > reboot.log
+sudo journalctl -p err > /home/bob/.priority/priority.log
+# https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs
+sudo journalctl -p info -g '^c' > .priority/boot.log 
+# | grep '^c' didn't work for above
+ps u 1 > /home/bob/resources.txt
+sleep 3000 &
 
 ```
 

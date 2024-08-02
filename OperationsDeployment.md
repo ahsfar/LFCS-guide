@@ -113,6 +113,23 @@ sudo at 15:30 Aug 20 2024
 <p>
   
 ```bash
+sudo apt search "apache http server"
+sudo apt update 
+sudo apt install apache2
+dpkg -S /bin/ls | cut -d: -f1 > package.txt
+dpkg-query -L coreutils | grep -i "/bin" | cut -d/ -f4 | grep '^u' > name.txt
+dpkg --listfiles coreutils | grep ^/bin | cut -d/ -f3 | grep '^u' > name.txt
+sudo apt-get remove --auto-remove -y ziptool
+sudo nano /etc/apt/sources.list
+deb http://us.archive.ubuntu.com/ubuntu/ focal main
+sudo apt update
+# buiild and install application
+cd tmux
+sudo ./autogen.sh
+sudo ./configure
+sudo make
+sudo make install
+tmux
 
 ```
 

@@ -9,8 +9,10 @@
 - Configure filesystem automounters
 - Monitor storage performance
 
-
-
+<details><summary>show</summary>
+<p>
+  
+```bash
 lsblk
 sudo mkswap /dev/sdb
 df -TH 
@@ -31,3 +33,9 @@ swapon /dev/vdb2
 swapon -s
 swapoff /dev/vdb2
 cfdisk
+```
+
+</p>
+</details>
+
+

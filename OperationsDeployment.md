@@ -184,12 +184,9 @@ sudo xfs_repair -n /dev/vdb > /home/bob/fscheck 2>&1
   
 ```bash
 docker run -d -p 1234:80 --name website docker.io/library/nginx:latest
-
-Docker ps -a
-
-Docker rm website
-
-Docker pull img_name
+docker ps -a
+docker rm websit
+docker pull img_name
 
 docker images
 docker ps -a
@@ -199,7 +196,6 @@ docker rmi $IMAGE_ID
 docker rmi $IMAGE_ID -f
 
 docker rm -f $(docker ps -a -q)
-
 docker run -d -p 9080:80 --restart always --name webinstance1 httpd
 
 ```

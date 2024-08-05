@@ -92,4 +92,22 @@ xfs_admin -L "SwapFS" /dev/vdb
 </p>
 </details>
 
+<details><summary>show</summary>
+<p>
+  
+```bash
 
+```
+
+</p>
+</details>
+
+<details><summary>show</summary>
+<p>
+  
+```bash
+
+```
+
+</p>
+</details>

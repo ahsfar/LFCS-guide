@@ -157,6 +157,12 @@ tmux
 <p>
   
 ```bash
+df /
+du -sh /bin/
+free --mega
+uptime
+lscpu
+sudo xfs_repair -n /dev/vdb > /home/bob/fscheck 2>&1
 
 ```
 

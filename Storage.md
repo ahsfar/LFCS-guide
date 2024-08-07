@@ -76,6 +76,14 @@ xfs_admin -L "SwapFS" /dev/vdb
 <p>
   
 ```bash
+cat /proc/mounts
+findmnt
+findmnt /dev/vda1
+umount /mnt
+mount /dev/vdb1 /mnt/ -o ro,noexec,nosuid
+mount -o remount,rw /dev/vdb1 /mnt
+vi /etc/fstab
+/dev/vdb1 /mnt ext4 defaults,ro 0 2
 
 ```
 

@@ -183,20 +183,48 @@ sudo xfs_repair -n /dev/vdb > /home/bob/fscheck 2>&1
 <p>
   
 ```bash
-docker run -d -p 1234:80 --name website docker.io/library/nginx:latest
+virsh destroy VM1
+virsh autostart VM1
 docker ps -a
-docker rm websit
+docker run -d -p 1234:80 --name website docker.io/library/nginx:latest
+docker rm website
 docker pull img_name
-
 docker images
 docker ps -a
 docker stop $CONTAINER_ID
 docker rm $CONTAINER_ID
 docker rmi $IMAGE_ID
 docker rmi $IMAGE_ID -f
-
 docker rm -f $(docker ps -a -q)
 docker run -d -p 9080:80 --restart always --name webinstance1 httpd
+virsh list --all
+virsh start VM1
+virsh destroy VM1
+virsh undefine VM1
+ 
+virsh define /opt/testmachine2.xml
+virsh list --all
+virsh start VM2
+ 
+virsh setmaxmem VM2 80M --config
+virsh setmem VM2 80M --config
+virsh shutdown VM2
+ 
+virsh destroy VM2
+virsh start VM2
+ 
+virt-install --name kk-ubuntu --memory=1024 --vcpu=1 --graphics=none --disk path=/var/lib/libvirt/images/ubuntu-22.04-minimal-cloudimg-amd64.img --os-variant=ubuntu22.04 --network network=default --import
+ 
+virt-install \
+    --name kk-ubuntu \
+    --memory 1024 \
+    --vcpus 1 \
+    --disk path=/var/lib/libvirt/images/ubuntu-22.04-minimal-cloudimg-amd64.img\
+    --import \
+    --os-variant ubuntu22.04 \
+    --graphics none \
+    --network network=default
+
 
 ```
 

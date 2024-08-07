@@ -94,6 +94,17 @@ vi /etc/fstab
 <p>
   
 ```bash
+vi /etc/exports
+/home 10.0.0.0/24(ro)
+sudo exportfs -r
+systemctl restart nfs-server
+grep "/home" /etc/exports
+mount 127.0.0.1:/home /mnt
+vi /etc/fstab
+127.0.0.1:/home /mnt nfs defaults 0 0
+vi /etc/exports
+/home 192.0.0.0/24(ro) 127.0.0.10(rw,no_root_squash)
+exportfs -r
 
 ```
 

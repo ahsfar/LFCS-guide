@@ -52,6 +52,17 @@ sudo chage -W 2 jane
 </details>
 
 
+<details><summary>show</summary>
+<p>
+  
+```bash
+
+```
+
+</p>
+</details>
+
+
 
 <details><summary>show</summary>
 <p>
@@ -93,12 +104,4 @@ trinity ALL=(ALL) ALL
 
 
 
-<details><summary>show</summary>
-<p>
-  
-```bash
 
-```
-
-</p>
-</details>

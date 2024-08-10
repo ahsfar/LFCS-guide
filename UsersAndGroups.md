@@ -8,7 +8,11 @@
 - Configure the system to use LDAP user and group accounts
 
 
-https://www.redhat.com/sysadmin/linux-groups
+<details><summary>show</summary>
+<p>
+  
+```bash
+# https://www.redhat.com/sysadmin/linux-groups
 
 sudo usermod -e 2030-03-01 jane
 
@@ -42,11 +46,17 @@ sudo usermod -g rugby sam
 sudo groupdel appdevs
 
 sudo chage -W 2 jane
+```
 
--------
+</p>
+</details>
 
 
 
+<details><summary>show</summary>
+<p>
+  
+```bash
 nproc 
 
 sudo vi /etc/security/limits.conf
@@ -73,3 +83,22 @@ sudo visudo /etc/sudoers
 trinity   ALL=(sam)   ALL
 
 trinity ALL=(ALL) ALL
+
+```
+
+</p>
+</details>
+
+
+
+
+
+<details><summary>show</summary>
+<p>
+  
+```bash
+
+```
+
+</p>
+</details>

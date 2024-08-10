@@ -10,7 +10,12 @@
 - Configure bridge and bonding devices
 - Implement reverse proxies and load balancers
 
+
+
+<details><summary>show</summary>
+<p>
   
+```bash
 ip a
 
 ip route show
@@ -60,9 +65,18 @@ sudo netstat -tulpn | grep LISTEN
 
 sudo vim /etc/systemd/resolved.conf
 #DNS --> DNS=8.8.8.8
+```
 
-—
-https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server
+</p>
+</details>
+
+
+
+<details><summary>show</summary>
+<p>
+  
+```bash
+# https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server
 
 sudo ufw status numbered 
 
@@ -73,3 +87,19 @@ sudo ufw allow from 10.11.12.0/24
 sudo ufw status numbered
 sudo ufw delete 5
 sudo ufw insert 1 deny from 10.0.0.19
+```
+
+</p>
+</details>
+
+
+
+<details><summary>show</summary>
+<p>
+  
+```bash
+
+```
+
+</p>
+</details>

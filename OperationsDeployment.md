@@ -173,7 +173,30 @@ sudo xfs_repair -n /dev/vdb > /home/bob/fscheck 2>&1
 <p>
   
 ```bash
+# https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/selinux_users_and_administrators_guide/sect-security-enhanced_linux-working_with_selinux-selinux_contexts_labeling_files#sect-Security-Enhanced_Linux-SELinux_Contexts_Labeling_Files-Temporary_Changes_chcon
 
+ps auxZ | grep sshd
+vi /home/bob/sshd
+system_u:system_r:initrc_t:s0
+
+sysctl -w kernel.modules_disabled=1
+
+ls -Z /bin/sudo
+
+sysctl -w net.ipv6.conf.lo.seg6_enabled=1
+
+vi /etc/sysctl.conf
+vm.swappiness=10
+sysctl -p
+
+chcon -t httpd_sys_content_t /var/index.html
+
+# permissive
+sudo setenforce 0
+
+semanage user -l
+
+sudo restorecon -R /var/log/
 ```
 
 </p>

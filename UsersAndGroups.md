@@ -56,6 +56,39 @@ sudo chage -W 2 jane
 <p>
   
 ```bash
+echo $variable
+
+$HOME
+
+/etc/environment
+
+env > /home/bob/env
+
+
+vi ~/.bashrc
+export MYVAR=TRUE
+source ~/.bashrc
+
+env | grep GLOBALENV > /home/bob/globalenv
+
+sudo cp /etc/skel/.bash* /home/bob/default_data/
+
+sudo vi /etc/environment
+GLOBALOPTION=ON
+source /etc/environment
+
+sudo vi /etc/profile.d/welcome.sh
+echo "Welcome to our server!"
+
+sudo touch /etc/skel/README
+
+sudo vi /etc/environment
+LFCS=Welcome to the KodeKloud LFCS Labs!
+sudo su - bob
+
+vi /home/bob/.bashrc
+PATH="$HOME/.local/bin:$HOME/bin:$HOME/.config/bin:$PATH"
+source ~/.bashrc
 
 ```
 

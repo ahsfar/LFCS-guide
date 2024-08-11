@@ -98,7 +98,39 @@ sudo ufw insert 1 deny from 10.0.0.19
 <p>
   
 ```bash
+cat /etc/ssh/sshd_config
 
+
+sudo vi /etc/ssh/sshd_config
+PasswordAuthentication no
+sudo systemctl restart sshd
+
+sudo apt install squid -y
+sudo systemctl start squid
+
+sudo vi /etc/squid/squid.conf
+http_access deny localnet
+
+sudo vi /etc/squid/squid.conf
+acl vpn src 203.0.110.5
+http_access allow vpn
+# allow before http_access deny otherwise it won’t work
+
+sudo vi /etc/ssh/sshd_config
+#AddressFamily any
+AddressFamily inet
+
+sudo vi /etc/squid/squid.conf
+http_access allow external
+
+sudo vi /etc/squid/squid.conf
+acl facebook dstdomain .facebook.com
+http_access deny facebook
+
+sudo vi /etc/ssh/sshd_config
+PasswordAuthentication yes
+PermitRootLogin no
+sudo systemctl restart sshd
 ```
 
 </p>

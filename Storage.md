@@ -115,6 +115,23 @@ exportfs -r
 <p>
   
 ```bash
+sudo apt install lvm2 -y
+sudo lvmdiskscan
+
+pvcreate /dev/vdb /dev/vdc
+
+pvs
+vi /root/pvsize
+
+pvremove /dev/vdc
+vgcreate volume1 /dev/vdb
+vgextend volume1 /dev/vdc
+vgreduce volume1 /dev/vdc
+vgs
+lvcreate --size 0.5G --name smalldata volume1
+lvresize --size 752M volume1/smalldata
+mkfs.xfs /dev/volume1/smalldata
+sudo lvremove volume1/smalldata
 
 ```
 

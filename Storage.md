@@ -142,6 +142,19 @@ sudo lvremove volume1/smalldata
 <p>
   
 ```bash
+# https://www.redhat.com/sysadmin/linux-access-control-lists
+raid1 mirrored
+cat /proc/mdstat
+getfacl archive
+# https://www.alibabacloud.com/help/en/ecs/use-cases/create-a-raid-array-for-a-linux-instance#:~:text=Run%20the%20mdadm%20command%20to,based%20on%20your%20business%20requirements.&text=If%20you%20are%20prompted%20that,to%20install%20the%20mdadm%20tool.
+
+sudo mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/vd[bc]
+lsblk
+
+setfacl --modify user:john:rw specialfile
+setfacl --remove user:john specialfile
+setfacl --modify group:mail:rx specialfile
+setfacl --recursive --modify user:john:rwx collection/
 
 ```
 

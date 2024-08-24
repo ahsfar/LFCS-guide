@@ -22,7 +22,7 @@
 * Deleting Groups:
 `groupdel groupname`
 
-<details><summary>show</summary>
+<details><summary>Commands: Create and manage local user and group accounts</summary>
 <p>
   
 ```bash

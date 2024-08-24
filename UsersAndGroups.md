@@ -8,7 +8,7 @@
 - Configure the system to use LDAP user and group accounts
 
 
-## Summary of Key Commands
+## Summary of Key Commands: Create and manage local user and group accounts
 * Creating Users:
 `useradd [options] username`
 * Modifying Users:

@@ -8,6 +8,20 @@
 - Configure the system to use LDAP user and group accounts
 
 
+## Summary of Key Commands
+Creating Users:
+useradd [options] username
+Modifying Users:
+usermod [options] username
+Deleting Users:
+userdel [options] username
+Creating Groups:
+groupadd [options] groupname
+Modifying Groups:
+groupmod [options] groupname
+Deleting Groups:
+groupdel groupname
+
 <details><summary>show</summary>
 <p>
   

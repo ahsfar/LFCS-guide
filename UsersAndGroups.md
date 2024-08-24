@@ -10,17 +10,17 @@
 
 ## Summary of Key Commands
 Creating Users:
-useradd [options] username
+`useradd [options] username`
 Modifying Users:
-usermod [options] username
+`usermod [options] username`
 Deleting Users:
-userdel [options] username
+`userdel [options] username`
 Creating Groups:
-groupadd [options] groupname
+`groupadd [options] groupname`
 Modifying Groups:
-groupmod [options] groupname
+`groupmod [options] groupname`
 Deleting Groups:
-groupdel groupname
+`groupdel groupname`
 
 <details><summary>show</summary>
 <p>

@@ -9,8 +9,8 @@
 
 
 
-
-## <details><summary>Commands: Create and manage local user and group accounts</summary>
+## Commands
+<details><summary>Commands: Create and manage local user and group accounts</summary>
 <p>
   
 ```bash
@@ -67,7 +67,8 @@ sudo chage -W 2 jane
 * Deleting Groups:
 `groupdel groupname`
 
-## <details><summary>Commands:</summary>
+## Commands
+<details><summary>Commands:</summary>
 <p>
   
 ```bash
@@ -114,7 +115,8 @@ source ~/.bashrc
 *
 ``
 
-## <details><summary>Commands:</summary>
+## Commands
+<details><summary>Commands:</summary>
 <p>
   
 ```bash

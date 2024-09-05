@@ -112,8 +112,39 @@ source ~/.bashrc
 </details>
 
 ### Summary 
-*
-``
+* Display Variable:
+`echo $variable`
+* Home Directory:
+`$HOME`
+* Environment File:
+`/etc/environment`
+* Export Variables to File:
+`env > /home/bob/env`
+* Edit Bash Config:
+`vi ~/.bashrc`
+`export MYVAR=TRUE`
+`source ~/.bashrc`
+* Filter Environment Variables:
+`env | grep GLOBALENV > /home/bob/globalenv`
+* Copy Default Bash Files:
+`sudo cp /etc/skel/.bash* /home/bob/default_data/`
+* Edit System Environment:
+`sudo vi /etc/environment`
+`GLOBALOPTION=ON`
+* Create Welcome Script:
+`sudo vi /etc/profile.d/welcome.sh`
+`echo "Welcome to our server!"`
+* Create README in Skel:
+`sudo touch /etc/skel/README`
+* Set Custom Variable:
+`sudo vi /etc/environment`
+`LFCS=Welcome to the KodeKloud LFCS Labs!`
+* Switch to User Bob:
+`sudo su - bob`
+* Edit Bob's Bash Config:
+`vi /home/bob/.bashrc`
+`PATH="$HOME/.local/bin:$HOME/bin:$HOME/.config/bin:$PATH"`
+`source ~/.bashrc`
 
 ## Commands
 <details><summary>Commands:</summary>

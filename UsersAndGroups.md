@@ -9,7 +9,7 @@
 
 
 
-## Commands
+## Section 1
 <details><summary>Commands: Create and manage local user and group accounts</summary>
 <p>
   
@@ -53,7 +53,7 @@ sudo chage -W 2 jane
 </p>
 </details>
 
-### Summary 
+### Section 2 
 * Creating Users:
 `useradd [options] username`
 * Modifying Users:
@@ -146,7 +146,7 @@ source ~/.bashrc
 `PATH="$HOME/.local/bin:$HOME/bin:$HOME/.config/bin:$PATH"`
 `source ~/.bashrc`
 
-## Commands
+## Section 3
 <details><summary>Commands:</summary>
 <p>
   

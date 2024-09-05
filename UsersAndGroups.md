@@ -110,7 +110,6 @@ source ~/.bashrc
 </details>
 
 
-
 <details><summary>show</summary>
 <p>
   
@@ -148,7 +147,45 @@ trinity ALL=(ALL) ALL
 </details>
 
 
+## Summary
 
+Show Number of Processing Units:
+nproc
+
+Edit Security Limits Configuration:
+sudo vi /etc/security/limits.conf
+
+Set Max Processes for User Trinity:
+trinity - nproc 30
+
+Output Current Limits to File:
+ulimit -a > /home/bob/limits
+
+Edit Sudoers File for No Password Access:
+sudo visudo /etc/sudoers
+trinity ALL=(ALL) NOPASSWD: ALL
+
+Edit Sudoers for Mount Command Access:
+sudo visudo /etc/sudoers
+trinity ALL=(ALL) /usr/bin/mount
+
+Set Hard File Size Limit for Stephen:
+sudo vi /etc/security/limits.conf
+stephen hard fsize 4096
+
+Set Soft Process Limit for Sales Team:
+@salesteam soft nproc 20
+
+Grant All Sudo Access to Sales Team Group:
+sudo visudo /etc/sudoers
+%salesteam ALL=(ALL) ALL
+
+Grant All Sudo Access to User Trinity as User Sam:
+sudo visudo /etc/sudoers
+trinity ALL=(sam) ALL
+
+Grant All Sudo Access to User Trinity:
+trinity ALL=(ALL) ALL
 
 
 

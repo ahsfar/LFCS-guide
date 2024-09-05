@@ -67,7 +67,7 @@ sudo chage -W 2 jane
 * Deleting Groups:
 `groupdel groupname`
 
-<details><summary>show</summary>
+<details><summary>Commands:</summary>
 <p>
   
 ```bash
@@ -114,7 +114,7 @@ source ~/.bashrc
 *
 ``
 
-<details><summary>show</summary>
+<details><summary>Commands:</summary>
 <p>
   
 ```bash

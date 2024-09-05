@@ -8,19 +8,7 @@
 - Configure the system to use LDAP user and group accounts
 
 
-## Summary of Key Commands: Create and manage local user and group accounts
-* Creating Users:
-`useradd [options] username`
-* Modifying Users:
-`usermod [options] username`
-* Deleting Users:
-`userdel [options] username`
-* Creating Groups:
-`groupadd [options] groupname`
-* Modifying Groups:
-`groupmod [options] groupname`
-* Deleting Groups:
-`groupdel groupname`
+
 
 <details><summary>Commands: Create and manage local user and group accounts</summary>
 <p>
@@ -65,6 +53,19 @@ sudo chage -W 2 jane
 </p>
 </details>
 
+## Summary 
+* Creating Users:
+`useradd [options] username`
+* Modifying Users:
+`usermod [options] username`
+* Deleting Users:
+`userdel [options] username`
+* Creating Groups:
+`groupadd [options] groupname`
+* Modifying Groups:
+`groupmod [options] groupname`
+* Deleting Groups:
+`groupdel groupname`
 
 <details><summary>show</summary>
 <p>
@@ -109,6 +110,9 @@ source ~/.bashrc
 </p>
 </details>
 
+## Summary 
+*
+``
 
 <details><summary>show</summary>
 <p>

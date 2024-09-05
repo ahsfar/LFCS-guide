@@ -10,7 +10,7 @@
 
 
 
-<details><summary>Commands: Create and manage local user and group accounts</summary>
+## <details><summary>Commands: Create and manage local user and group accounts</summary>
 <p>
   
 ```bash
@@ -53,7 +53,7 @@ sudo chage -W 2 jane
 </p>
 </details>
 
-## Summary 
+### Summary 
 * Creating Users:
 `useradd [options] username`
 * Modifying Users:
@@ -67,7 +67,7 @@ sudo chage -W 2 jane
 * Deleting Groups:
 `groupdel groupname`
 
-<details><summary>Commands:</summary>
+## <details><summary>Commands:</summary>
 <p>
   
 ```bash
@@ -110,11 +110,11 @@ source ~/.bashrc
 </p>
 </details>
 
-## Summary 
+### Summary 
 *
 ``
 
-<details><summary>Commands:</summary>
+## <details><summary>Commands:</summary>
 <p>
   
 ```bash
@@ -151,7 +151,7 @@ trinity ALL=(ALL) ALL
 </details>
 
 
-## Summary
+### Summary
 * Show Number of Processing Units:
 `nproc`
 * Edit Security Limits Configuration:

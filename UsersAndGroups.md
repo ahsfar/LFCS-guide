@@ -53,7 +53,7 @@ sudo chage -W 2 jane
 </p>
 </details>
 
-### Section 2 
+### Summary
 * Creating Users:
 `useradd [options] username`
 * Modifying Users:
@@ -67,7 +67,7 @@ sudo chage -W 2 jane
 * Deleting Groups:
 `groupdel groupname`
 
-## Commands
+## Section 2 
 <details><summary>Commands: Environment Variables and User Configuration</summary>
 <p>
   

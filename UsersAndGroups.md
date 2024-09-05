@@ -68,7 +68,7 @@ sudo chage -W 2 jane
 `groupdel groupname`
 
 ## Commands
-<details><summary>Commands:</summary>
+<details><summary>Commands:Summary of Key Commands: Environment Variables and User Configuration</summary>
 <p>
   
 ```bash

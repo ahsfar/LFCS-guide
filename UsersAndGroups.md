@@ -68,7 +68,7 @@ sudo chage -W 2 jane
 `groupdel groupname`
 
 ## Commands
-<details><summary>Commands:Summary of Key Commands: Environment Variables and User Configuration</summary>
+<details><summary>Commands: Environment Variables and User Configuration</summary>
 <p>
   
 ```bash
@@ -147,7 +147,7 @@ source ~/.bashrc
 `source ~/.bashrc`
 
 ## Section 3
-<details><summary>Commands:</summary>
+<details><summary>Commands: Resource Limits and Sudo Permissions</summary>
 <p>
   
 ```bash

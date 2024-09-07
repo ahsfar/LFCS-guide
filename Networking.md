@@ -81,6 +81,7 @@ sudo vim /etc/systemd/resolved.conf
 `sudo netstat -tlnp | grep 53`
 * Check Listening Ports for HTTP:
 `sudo netstat -tlnp | grep 8080`
+* Edit Hosts File:
 ```shell
 sudo vi /etc/hosts  
 8.8.8.8 example.com

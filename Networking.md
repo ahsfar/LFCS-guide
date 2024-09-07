@@ -11,7 +11,7 @@
 - Implement reverse proxies and load balancers
 
 
-
+## Section 1
 <details><summary>show</summary>
 <p>
   
@@ -70,8 +70,62 @@ sudo vim /etc/systemd/resolved.conf
 </p>
 </details>
 
+### Summary
+* Display Network Interfaces:
+`ip a`
+* Show Routing Table:
+`ip route show`
+* Check Listening Ports for SSH:
+`sudo ss -tlnp | grep :22`
+* Check Listening Ports for DNS:
+`sudo netstat -tlnp | grep 53`
+* Check Listening Ports for HTTP:
+`sudo netstat -tlnp | grep 8080`
+```shell
+sudo vi /etc/hosts  
+8.8.8.8 example.com
+```
+* Add IP Address to Interface:
+`sudo ip a add 192.168.9.3/24 dev eth1`
+* Edit Netplan Configuration:
+```shell
+sudo vim 99-custom.yaml  
+network:  
+  version: 2  
+  ethernets:  
+    enp6s0:  
+      dhcp4: false  
+      dhcp6: false  
+      addresses:  
+        - 10.0.10.5/24
+```
+* Set Permissions for Netplan File:
+`sudo chmod 600 /etc/netplan/99-custom.yaml`
+* Apply Netplan Configuration:
+`sudo netplan apply`
+* Test Netplan Configuration:
+`sudo netplan try (then press Enter)`
+* Reapply Netplan Configuration:
+`sudo netplan apply`
+* Check Specific Interface Address:
+`ip a | grep enp6s0`
+* Save Routing Table to File:
+```shell
+sudo ip route show > route.txt
+sudo ip r > route.txt
+```
+* Display Listening Sockets:
+`ss -tlnp`
+* Check Listening Ports with Netstat:
+`sudo netstat -tulpn | grep LISTEN`
+* Edit Systemd Resolved Configuration:
+```shell
+sudo vim /etc/systemd/resolved.conf  
+#DNS --> DNS=8.8.8.8
+```
 
 
+## Section 2
 <details><summary>show</summary>
 <p>
   
@@ -92,8 +146,9 @@ sudo ufw insert 1 deny from 10.0.0.19
 </p>
 </details>
 
+### Summary
 
-
+## Section 3
 <details><summary>show</summary>
 <p>
   
@@ -135,3 +190,5 @@ sudo systemctl restart sshd
 
 </p>
 </details>
+
+### Summary

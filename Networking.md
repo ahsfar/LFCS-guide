@@ -148,6 +148,19 @@ sudo ufw insert 1 deny from 10.0.0.19
 
 ### Summary
 
+* Check UFW Status with Numbers:
+`sudo ufw status numbered`
+* Allow Specific IP Access:
+`sudo ufw allow from 207.45.232.181`
+* Allow Subnet Access:
+`sudo ufw allow from 10.11.12.0/24`
+* Check UFW Status Again:
+`sudo ufw status numbered`
+* Delete Rule by Number:
+`sudo ufw delete 5`
+* Deny Access from Specific IP:
+`sudo ufw insert 1 deny from 10.0.0.19`
+
 ## Section 3
 <details><summary>show</summary>
 <p>
@@ -192,3 +205,7 @@ sudo systemctl restart sshd
 </details>
 
 ### Summary
+* 
+``
+```shell
+```

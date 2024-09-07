@@ -205,7 +205,46 @@ sudo systemctl restart sshd
 </details>
 
 ### Summary
-* 
-``
+
+* View SSH Configuration:
+`cat /etc/ssh/sshd_config`
+* Edit SSH Configuration to Disable Password Authentication:
 ```shell
+sudo vi /etc/ssh/sshd_config  
+PasswordAuthentication no
 ```
+* Restart SSH Service:
+`sudo systemctl restart sshd`
+* Install Squid Proxy:
+`sudo apt install squid -y`
+* Start Squid Service:
+`sudo systemctl start squid`
+* Edit Squid Configuration to Deny Local Network Access:
+```shell
+sudo vi /etc/squid/squid.conf  
+http_access deny localnet
+```
+* Allow VPN IP Access in Squid
+```shell
+acl vpn src 203.0.110.5  
+http_access allow vpn
+```
+* Edit SSH Configuration to Use IPv4 Only:
+```shell
+sudo vi /etc/ssh/sshd_config  
+AddressFamily inet
+```
+* Allow External Access in Squid:
+`http_access allow external`
+* Deny Access to Facebook in Squid:
+```shell
+acl facebook dstdomain .facebook.com  
+http_access deny facebook
+```
+* Revert SSH Password Authentication and Deny Root Login:
+```shell
+PasswordAuthentication yes  
+PermitRootLogin no
+```
+* Restart SSH Service Again:
+`sudo systemctl restart sshd`

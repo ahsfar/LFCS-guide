@@ -11,6 +11,9 @@
 - Create and enforce MAC using SELinux
 
 
+
+
+## Section 1
 <details><summary>show</summary>
 <p>
   
@@ -31,6 +34,13 @@ sudo shutdown -c
 </p>
 </details>
 
+
+### Summary
+* 
+```shell
+```
+
+## Section 2
 <details><summary>show</summary>
 <p>
   
@@ -67,6 +77,13 @@ WantedBy=multi-user.target
 </p>
 </details>
 
+### Summary
+* 
+```shell
+```
+
+## Section 3
+
 <details><summary>show</summary>
 <p>
   
@@ -94,6 +111,12 @@ sleep 3000 &
 </p>
 </details>
 
+### Summary
+* 
+```shell
+```
+
+## Section 4
 <details><summary>show</summary>
 <p>
   
@@ -126,6 +149,12 @@ sudo at 15:30 Aug 20 2024
 </p>
 </details>
 
+### Summary
+* 
+```shell
+```
+
+## Section 5
 <details><summary>show</summary>
 <p>
   
@@ -153,6 +182,12 @@ tmux
 </p>
 </details>
 
+### Summary
+* 
+```shell
+```
+
+## Section 6
 <details><summary>show</summary>
 <p>
   
@@ -169,6 +204,12 @@ sudo xfs_repair -n /dev/vdb > /home/bob/fscheck 2>&1
 </p>
 </details>
 
+### Summary
+* 
+```shell
+```
+
+## Section 7
 <details><summary>show</summary>
 <p>
   
@@ -202,6 +243,12 @@ sudo restorecon -R /var/log/
 </p>
 </details>
 
+### Summary
+* 
+```shell
+```
+
+## Section 8
 <details><summary>show</summary>
 <p>
   

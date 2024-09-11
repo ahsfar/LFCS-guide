@@ -26,7 +26,42 @@ apropos NFS mount configuration | grep -i 'NFS mount' | grep -i Configuration | 
 </details>
 
 ### Summary
-* 
+
+* Checking SSH Version:
+```shell
+man ssh | grep -i version
+```
+  * Search for the term "version" within the manual page of SSH. Useful for identifying SSH version-related details.
+
+* Changing Hostname:
+```shell
+hostnamectl set-hostname new_hostname
+```
+  * Set a new hostname for the system using hostnamectl. Replace 'new_hostname' with the desired system hostname.
+
+* Updating Manual Pages Database:
+mandb
+  * Rebuild the manual page index database. Useful when the man pages are outdated or missing.
+
+* Verbose SSH Connection:
+ssh -v alex@ubuntu
+  * Start an SSH connection with detailed logging for troubleshooting. Replace 'alex' and 'ubuntu' with the appropriate username and hostname.
+
+* Manual for man Command:
+man man
+  * Access the manual page for the 'man' command itself. Helpful for understanding how to use manual pages.
+
+* Search for SSH in Manuals (with Error Handling):
+apropos ssh
+  * Search for SSH-related entries across man pages. If an error (e.g., "nothing appropriate") occurs, update the man database using 'sudo mandb' before retrying.
+
+* Filtering NFS Mount Configuration:
+```shell
+apropos NFS mount configuration | grep -i 'NFS mount' | grep -i Configuration | cut -d" " -f1 | cat >> /home/bob/nfs
+```
+  * Search for NFS mount configuration details in the man pages, filter results, and append them to '/home/bob/nfs'. This is useful for gathering specific information on NFS configuration.
+
+
 ```shell
 ```
 

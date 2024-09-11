@@ -8,7 +8,7 @@
 - Troubleshoot diskspace issues
 - Work with SSL certificates
 
-
+# Section 1
 <details><summary>show</summary>
 <p>
   
@@ -20,13 +20,17 @@ ssh -v alex@ubunut
 man man
 apropos ssh (run sudo mandb if error -> ssh: nothing appropriate.)
 apropos NFS mount configuration | grep -i 'NFS mount' | grep -i Configuration | cut -d" " -f1 | cat >> /home/bob/nfs
-
-
 ```
 
 </p>
 </details>
 
+### Summary
+* 
+```shell
+```
+
+# Section 2
 
 <details><summary>show</summary>
 <p>
@@ -48,7 +52,12 @@ ls --full-time
 </p>
 </details>
 
+### Summary
+* 
+```shell
+```
 
+# Section 3
 
 <details><summary>show</summary>
 <p>
@@ -76,7 +85,12 @@ chmod 0755 new_dir/ -> (rwxr-xr-x)
 </p>
 </details>
 
+### Summary
+* 
+```shell
+```
 
+# Section 4
 
 <details><summary>show</summary>
 <p>
@@ -101,6 +115,14 @@ tail -500 /home/bob/textfile  > /home/bob/last
 
 </p>
 </details>
+
+### Summary
+* 
+```shell
+```
+
+# Section 5
+
 
 <details><summary>show</summary>
 <p>
@@ -148,7 +170,12 @@ sort -duf /home/bob/values.conf > /home/bob/values.sorted
 </p>
 </details>
 
+### Summary
+* 
+```shell
+```
 
+# Section 6
 
 <details><summary>show</summary>
 <p>
@@ -171,3 +198,7 @@ git merge documentation
 </p>
 </details>
 
+### Summary
+* 
+```shell
+```

@@ -39,6 +39,11 @@ cfdisk
 </details>
 
 
+### Summary
+* 
+```shell
+```
+
 <details><summary>show</summary>
 <p>
   
@@ -72,6 +77,12 @@ xfs_admin -L "SwapFS" /dev/vdb
 </p>
 </details>
 
+
+### Summary
+* 
+```shell
+```
+
 <details><summary>show</summary>
 <p>
   
@@ -89,6 +100,12 @@ vi /etc/fstab
 
 </p>
 </details>
+
+
+### Summary
+* 
+```shell
+```
 
 <details><summary>show</summary>
 <p>
@@ -110,6 +127,12 @@ exportfs -r
 
 </p>
 </details>
+
+
+### Summary
+* 
+```shell
+```
 
 <details><summary>show</summary>
 <p>
@@ -138,6 +161,12 @@ sudo lvremove volume1/smalldata
 </p>
 </details>
 
+
+### Summary
+* 
+```shell
+```
+
 <details><summary>show</summary>
 <p>
   
@@ -160,3 +189,9 @@ setfacl --recursive --modify user:john:rwx collection/
 
 </p>
 </details>
+
+
+### Summary
+* 
+```shell
+```

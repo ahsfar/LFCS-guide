@@ -238,9 +238,62 @@ tail -500 /home/bob/textfile  > /home/bob/last
 </details>
 
 ### Summary
-* 
-```shell
-```
+
+* Replace 'enabled' with 'disabled'
+   `sed -i 's/enabled/disabled/g' /home/bob/values.conf`
+   * Replace all occurrences of 'enabled' with 'disabled' in `/home/bob/values.conf`.
+
+* Replace 'disabled' with 'enabled' (case-insensitive)
+   `sed -i 's/disabled/enabled/gI' /home/bob/values.conf`
+   * Replace 'disabled' with 'enabled', ignoring case, in `/home/bob/values.conf`.
+
+* Extract lines 500 to 2000
+   `awk 'NR>=500 && NR<=2000' /home/bob/values.conf`
+   * Extract lines 500 through 2000 from `/home/bob/values.conf`.
+
+* Replace 'enabled' with 'disabled' in lines 500 to 2000
+   `awk 'NR>=500 && NR<=2000' /home/bob/values.conf | sed -i 's/enabled/disabled/g' /home/bob/values.conf`
+   * Search lines 500 to 2000 and replace 'enabled' with 'disabled'.
+
+* Replace a complex string
+   `sed -i 's@#%$2jh//238720//31223@$2//23872031223@g' /home/bob/data.txt`
+   * Replace a complex string pattern in `/home/bob/data.txt`.
+
+* Filter capitalized words with 2 or more lowercase letters
+   `egrep -o '\b[A-Z][a-z]{2,}\b' /etc/nsswitch.conf > /home/bob/filtered1`
+   * Extract words starting with a capital letter and followed by at least 2 lowercase letters from `/etc/nsswitch.conf`.
+
+* Vim commands: view, copy, cut, paste, save
+   `vi -> :set number, :1049, y, d, :5, P, :wq`
+   * Enable line numbers, copy from line 1049, cut, paste at line 5, and save.
+
+* Delete first 1000 lines in Vim
+   `:1,1000d`
+   * Delete the first 1000 lines in Vim.
+
+* Compare two files and append the result
+   `diff /home/bob/file1 /home/bob/file2 >> /home/bob/file3`
+   * Compare `/home/bob/file1` with `/home/bob/file2` and append differences to `/home/bob/file3`.
+
+* Search for 5-digit numbers
+   `egrep '[0-9]{5}' textfile > /home/bob/number`
+   * Search for 5-digit numbers in `textfile` and save the results to `/home/bob/number`.
+
+* Count lines starting with the digit 2
+   `egrep '^2[0-9]*' /home/bob/textfile | wc -l > /home/bob/count`
+   * Count lines starting with '2' in `/home/bob/textfile`.
+
+* Count lines starting with "Section" (case-insensitive)
+   `egrep -i ^Section /home/bob/testfile | wc -l > /home/bob/count_lines`
+   * Count lines starting with "Section", ignoring case, in `/home/bob/testfile`.
+
+* Search for the word "man" and save results
+   `grep -w man testfile > /home/bob/man_filtered`
+   * Search for the exact word 'man' in `testfile` and save to `/home/bob/man_filtered`.
+
+* Extract the last 500 lines
+   `tail -500 /home/bob/textfile > /home/bob/last`
+   * Save the last 500 lines of `/home/bob/textfile` to `/home/bob/last`.
 
 # Section 5
 

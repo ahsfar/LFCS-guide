@@ -345,9 +345,119 @@ sort -duf /home/bob/values.conf > /home/bob/values.sorted
 </details>
 
 ### Summary
-* 
-```shell
-```
+
+* View the `tar` manual
+   `man tar`
+   * Access the manual page for the `tar` command.
+
+* Create a tar archive
+   `tar -cvf project.tar project`
+   * Archive the `project` directory into `project.tar`.
+
+* Change to the `/home/bob` directory
+   `cd /home/bob`
+   * Navigate to the `/home/bob` directory.
+
+* Create a tar archive with absolute paths
+   `sudo tar cfP logs.tar /var/log/`
+   * Archive the `/var/log/` directory with absolute paths to `logs.tar`.
+
+* Create a compressed tar.gz archive
+   `tar -zcvf project.tar.gz project`
+   * Archive and compress the `project` directory into `project.tar.gz`.
+
+* Create a compressed tar.gz archive with absolute paths
+   `sudo tar czfP logs.tar.gz /var/log/`
+   * Archive and compress `/var/log/` with absolute paths to `logs.tar.gz`.
+
+* Save a tar archive as plain text
+   `cat /home/bob/logs.tar > /home/bob/tar_data.txt`
+   * Write the contents of `logs.tar` to `tar_data.txt`.
+
+* List contents of a tar archive
+   `tar tfP /home/bob/logs.tar > /home/bob/tar_data.txt`
+   * List contents of `logs.tar` and save them to `tar_data.txt`.
+
+* View tar help options
+   `tar --help`
+   * Display help information for the `tar` command.
+
+* Extract an archive to a specific directory
+   `tar --extract --file /home/bob/archive.tar.gz --directory /tmp/`
+   * Extract `archive.tar.gz` into the `/tmp/` directory.
+
+* Extract a tar archive (alternative syntax)
+   `tar xf /home/bob/archive.tar.gz -C /tmp`
+   * Extract `archive.tar.gz` into `/tmp` using shorter syntax.
+
+* Run a script and save stdout output
+   `bash /home/bob/script.sh >&1 | tee /home/bob/output_stdout.txt`
+   * Execute `script.sh` and save the standard output to `output_stdout.txt`.
+
+* Redirect output of a script to a file
+   `sudo ./script.sh > /home/bob/output_stdout.txt`
+   * Run `script.sh` and redirect its output to `output_stdout.txt`.
+
+* Save both stdout and stderr to the same file
+   `bash /home/bob/script.sh 2>&1 | tee /home/bob/output.txt`
+   * Run `script.sh` and save both stdout and stderr to `output.txt`.
+
+* Redirect stdout and stderr (alternative syntax)
+   `sudo ./script.sh > /home/bob/output.txt 2>&1`
+   * Run `script.sh`, redirecting both stdout and stderr to `output.txt`.
+
+* Redirect only stderr to a file
+   `sudo ./script.sh 2> /home/bob/output_errors.txt`
+   * Run `script.sh` and save only stderr to `output_errors.txt`.
+
+* View the `bzip2` manual
+   `man bzip2`
+   * Access the manual page for the `bzip2` command.
+
+* Compress a file but keep the original
+   `bzip2 --keep /home/bob/file.txt`
+   * Compress `file.txt` with `bzip2` while keeping the original file.
+
+* Extract a tar.gz archive to a directory
+   `sudo tar xf /home/bob/archive.tar.gz -C /opt`
+   * Extract `archive.tar.gz` to `/opt`.
+
+* Append contents of one file to another
+   `cat /home/bob/file.txt >> /home/bob/destination.txt`
+   * Append the contents of `file.txt` to `destination.txt`.
+
+* Archive a file
+   `tar --create --file file.tar file`
+   * Create a tar archive `file.tar` from `file`.
+
+* View gzip help options
+   `gzip --help`
+   * Display help information for the `gzip` command.
+
+* Compress a file with gzip
+   `gzip games.txt`
+   * Compress `games.txt` using gzip.
+
+* View unxz help options
+   `unxz --help`
+   * Display help information for the `unxz` command.
+
+* Decompress an xz file
+   `unxz lfcs.txt.xz`
+   * Decompress `lfcs.txt.xz` to `lfcs.txt`.
+
+* View sort help options
+   `sort --help`
+   * Display help information for the `sort` command.
+
+* Sort and remove duplicates from a file
+   `sort -du /home/bob/values.conf > /home/bob/values.sort`
+   * Sort `values.conf` and remove duplicates, saving the output to `values.sort`.
+
+* Sort case-insensitively and remove duplicates
+   `sort -duf /home/bob/values.conf > /home/bob/values.sorted`
+   * Sort `values.conf` case-insensitively, remove duplicates, and save to `values.sorted`.
+
 
 # Section 6
 

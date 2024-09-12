@@ -9,6 +9,8 @@
 - Configure filesystem automounters
 - Monitor storage performance
 
+## Section 1
+
 <details><summary>show</summary>
 <p>
   
@@ -43,6 +45,8 @@ cfdisk
 * 
 ```shell
 ```
+
+## Section 2
 
 <details><summary>show</summary>
 <p>
@@ -83,6 +87,8 @@ xfs_admin -L "SwapFS" /dev/vdb
 ```shell
 ```
 
+## Section 3
+
 <details><summary>show</summary>
 <p>
   
@@ -106,6 +112,8 @@ vi /etc/fstab
 * 
 ```shell
 ```
+
+## Section 4
 
 <details><summary>show</summary>
 <p>
@@ -133,6 +141,8 @@ exportfs -r
 * 
 ```shell
 ```
+
+## Section 5
 
 <details><summary>show</summary>
 <p>
@@ -166,6 +176,8 @@ sudo lvremove volume1/smalldata
 * 
 ```shell
 ```
+
+## Section 6
 
 <details><summary>show</summary>
 <p>

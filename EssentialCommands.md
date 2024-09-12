@@ -483,6 +483,32 @@ git merge documentation
 </details>
 
 ### Summary
-* 
-```shell
-```
+
+* Generate a new private key and CSR
+   `openssl req -newkey rsa:4096 -keyout priv.key -out cert.csr`
+   * Create a new RSA 4096-bit private key and generate a certificate signing request (CSR). Enter a password and default options as prompted.
+
+* Generate a self-signed certificate (option 1)
+   `openssl req -x509 -noenc -days 365 -keyout priv.key -out kodekloud.crt`
+   * Create a self-signed certificate (`kodekloud.crt`) valid for 365 days using the private key (`priv.key`).
+
+* Generate a self-signed certificate (option 2)
+   `openssl req -newkey rsa:4096 -x509 -days 365 -nodes -keyout priv.key -out kodekloud.crt`
+   * Create a new RSA 4096-bit key and self-signed certificate valid for 365 days, without encryption on the private key.
+
+* View certificate subject
+   `openssl x509 -noout -subject -in my.crt`
+   * Display the subject information of `my.crt` without showing other details.
+
+* Delete a Git branch
+   `git branch --delete testing`
+   * Delete the local Git branch named `testing`.
+
+* View Git commit logs with raw diff
+   `git log --raw`
+   * Display the commit history with changes in raw format.
+
+* Merge a branch into the current branch
+   `git merge documentation`
+   * Merge the `documentation` branch into the current branch.
+

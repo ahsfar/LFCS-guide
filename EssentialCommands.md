@@ -75,43 +75,43 @@ ls --full-time
 
 ### Summary
 
-* Create Directory
+* Create Directory:
    `mkdir /home/bob/lfcs`
    * Create a new directory `/home/bob/lfcs`.
 
-* Create an Empty File
+* Create an Empty File:
    `touch /home/bob/lfcs/lfcs.txt`
    * Create an empty file `lfcs.txt` in the `/home/bob/lfcs` directory.
 
-* Copy Directory Recursively
+* Copy Directory Recursively:
    `cp -r /tmp/Invoice/ /home/bob/`
    * Copy the entire `/tmp/Invoice` directory recursively to `/home/bob/`.
 
-* Copy File with Attributes
+* Copy File with Attributes:
    `cp -p /home/bob/myfile.txt /home/bob/data/`
    * Copy `myfile.txt` to the `/home/bob/data/` directory, preserving file attributes (like ownership, timestamps, etc.).
 
-* Move Files
+* Move Files:
    `mv /home/bob/lfcs/* /home/bob/new-data/`
    * Move all files from the `/home/bob/lfcs/` directory to `/home/bob/new-data/`.
 
-* Create Soft Link
+* Create Soft Link:
    `ln -s /tmp /home/bob/link_to_tmp`
    * Create a symbolic (soft) link from `/tmp` to `/home/bob/link_to_tmp`.
 
-* Create Hard Link
+* Create Hard Link:
    `ln /tmp/hlink /home/bob/hlink`
    * Create a hard link for the `/tmp/hlink` file in `/home/bob/`.
 
-* Rename File
+* Rename File:
    `mv /home/bob/new_file /home/bob/old_file`
    * Rename `new_file` to `old_file` in the `/home/bob/` directory.
 
-* Create Nested Directories
+* Create Nested Directories:
    `mkdir -p /tmp/1/2/3/4/5/6/7/8/9`
    * Create nested directories up to `/tmp/1/2/3/4/5/6/7/8/9` in a single command.
 
-* List Files with Full Time
+* List Files with Full Time:
    `ls --full-time`
    * List files in the directory showing full time information, including timestamps.
 
@@ -146,11 +146,11 @@ chmod 0755 new_dir/ -> (rwxr-xr-x)
 
 ### Summary
 
-* Find files modified in the last 5 minutes
+* Find files modified in the last 5 minutes:
    `find /dev/ -mmin -5`
    * Search for files in `/dev/` directory modified in the last 5 minutes.
 
-* Remove group write permission
+* Remove group write permission:
    `chmod g-w somefile`
    * Remove write permission for the group from the `somefile`.
 
@@ -158,7 +158,7 @@ chmod 0755 new_dir/ -> (rwxr-xr-x)
    `sudo find /var/log/ -perm -g=w ! -perm /o=rw > /home/bob/data.txt`
    * Search for files in `/var/log/` with group write permission but without world read/write permission, and save the output to `/home/bob/data.txt`.
 
-* Find files with specific permission code
+* Find files with specific permission code:
    `find /home/bob/ -perm 402 > /home/bob/secfile.txt`
    * Search for files in `/home/bob/` with the permission code `402` and save the output to `/home/bob/secfile.txt`.
 
@@ -166,47 +166,47 @@ chmod 0755 new_dir/ -> (rwxr-xr-x)
    `chmod u+s,g+s,o+t /home/bob/datadir/`
    * Set the SUID, SGID, and sticky bit on the directory `/home/bob/datadir/`.
 
-* Find file by name and redirect result to file
+* Find file by name and redirect result to file:
    `sudo find /usr/share/ | grep dogs.txt > /home/bob/dogs`
    * Search for `dogs.txt` in `/usr/share/` and save the result to `/home/bob/dogs`.
 
-* Find file by name
+* Find file by name:
    `find /home/bob/ -name cats.txt`
    * Search for a file named `cats.txt` in `/home/bob/`.
 
-* Copy file to another location
+* Copy file to another location:
    `sudo cp /home/bob/.etc/h/e/r/cats.txt /opt`
    * Copy the `cats.txt` file from `/home/bob/.etc/h/e/r/` to `/opt`.
 
-* Find files by name and save result to file
+* Find files by name and save result to file:
    `sudo find /var/ -name pets > /home/bob/pets.txt`
    * Search for files named `pets` in `/var/` and save the result to `/home/bob/pets.txt`.
 
-* Find files with world-readable, writable, and executable permissions
+* Find files with world-readable, writable, and executable permissions:
    `sudo find /var -type f -perm 0777 -print`
    * Search for files in `/var/` with permission `0777` (read, write, and execute for everyone).
 
-* Find files with specific permissions and save to file
+* Find files with specific permissions and save to file:
    `sudo find /usr/ -type f -perm 0640 > /home/bob/.opt/permissions.txt`
    * Search for files in `/usr/` with the permission code `0640` and save the result to `/home/bob/.opt/permissions.txt`.
 
-* Count files modified in the last 120 minutes
+* Count files modified in the last 120 minutes:
    `sudo find /usr -type f -mmin -120 | wc -l`
    * Find the number of files modified in the last 120 minutes in `/usr/`.
 
-* Find files larger than 20M in size
+* Find files larger than 20M in size:
    `sudo find /var -type f -size 20M`
    * Search for files in `/var/` that are exactly 20MB in size.
 
-* Find files in a specific size range and save result to file
+* Find files in a specific size range and save result to file:
    `sudo find /usr -type f -size +5M -size -10M > /home/bob/size.txt`
    * Search for files in `/usr/` between 5MB and 10MB in size and save the result to `/home/bob/size.txt`.
 
-* Change permissions on a directory
+* Change permissions on a directory:
    `sudo chmod 0100 /home/bob/LFCS`
    * Change permissions on `/home/bob/LFCS` to `0100` (owner can execute only).
 
-* Set directory permissions (rwxr-xr-x)
+* Set directory permissions (rwxr-xr-x):
    `chmod 0755 new_dir/`
    * Set permissions on `new_dir/` to `rwxr-xr-x`.
 
@@ -239,59 +239,59 @@ tail -500 /home/bob/textfile  > /home/bob/last
 
 ### Summary
 
-* Replace 'enabled' with 'disabled'
+* Replace 'enabled' with 'disabled':
    `sed -i 's/enabled/disabled/g' /home/bob/values.conf`
    * Replace all occurrences of 'enabled' with 'disabled' in `/home/bob/values.conf`.
 
-* Replace 'disabled' with 'enabled' (case-insensitive)
+* Replace 'disabled' with 'enabled' (case-insensitive):
    `sed -i 's/disabled/enabled/gI' /home/bob/values.conf`
    * Replace 'disabled' with 'enabled', ignoring case, in `/home/bob/values.conf`.
 
-* Extract lines 500 to 2000
+* Extract lines 500 to 2000:
    `awk 'NR>=500 && NR<=2000' /home/bob/values.conf`
    * Extract lines 500 through 2000 from `/home/bob/values.conf`.
 
-* Replace 'enabled' with 'disabled' in lines 500 to 2000
+* Replace 'enabled' with 'disabled' in lines 500 to 2000:
    `awk 'NR>=500 && NR<=2000' /home/bob/values.conf | sed -i 's/enabled/disabled/g' /home/bob/values.conf`
    * Search lines 500 to 2000 and replace 'enabled' with 'disabled'.
 
-* Replace a complex string
+* Replace a complex string:
    `sed -i 's@#%$2jh//238720//31223@$2//23872031223@g' /home/bob/data.txt`
    * Replace a complex string pattern in `/home/bob/data.txt`.
 
-* Filter capitalized words with 2 or more lowercase letters
+* Filter capitalized words with 2 or more lowercase letters:
    `egrep -o '\b[A-Z][a-z]{2,}\b' /etc/nsswitch.conf > /home/bob/filtered1`
    * Extract words starting with a capital letter and followed by at least 2 lowercase letters from `/etc/nsswitch.conf`.
 
-* Vim commands: view, copy, cut, paste, save
+* Vim commands: view, copy, cut, paste, save:
    `vi -> :set number, :1049, y, d, :5, P, :wq`
    * Enable line numbers, copy from line 1049, cut, paste at line 5, and save.
 
-* Delete first 1000 lines in Vim
+* Delete first 1000 lines in Vim:
    `:1,1000d`
    * Delete the first 1000 lines in Vim.
 
-* Compare two files and append the result
+* Compare two files and append the result:
    `diff /home/bob/file1 /home/bob/file2 >> /home/bob/file3`
    * Compare `/home/bob/file1` with `/home/bob/file2` and append differences to `/home/bob/file3`.
 
-* Search for 5-digit numbers
+* Search for 5-digit numbers:
    `egrep '[0-9]{5}' textfile > /home/bob/number`
    * Search for 5-digit numbers in `textfile` and save the results to `/home/bob/number`.
 
-* Count lines starting with the digit 2
+* Count lines starting with the digit 2:
    `egrep '^2[0-9]*' /home/bob/textfile | wc -l > /home/bob/count`
    * Count lines starting with '2' in `/home/bob/textfile`.
 
-* Count lines starting with "Section" (case-insensitive)
+* Count lines starting with "Section" (case-insensitive):
    `egrep -i ^Section /home/bob/testfile | wc -l > /home/bob/count_lines`
    * Count lines starting with "Section", ignoring case, in `/home/bob/testfile`.
 
-* Search for the word "man" and save results
+* Search for the word "man" and save results:
    `grep -w man testfile > /home/bob/man_filtered`
    * Search for the exact word 'man' in `testfile` and save to `/home/bob/man_filtered`.
 
-* Extract the last 500 lines
+* Extract the last 500 lines:
    `tail -500 /home/bob/textfile > /home/bob/last`
    * Save the last 500 lines of `/home/bob/textfile` to `/home/bob/last`.
 
@@ -346,115 +346,115 @@ sort -duf /home/bob/values.conf > /home/bob/values.sorted
 
 ### Summary
 
-* View the `tar` manual
+* View the `tar` manual:
    `man tar`
    * Access the manual page for the `tar` command.
 
-* Create a tar archive
+* Create a tar archive:
    `tar -cvf project.tar project`
    * Archive the `project` directory into `project.tar`.
 
-* Change to the `/home/bob` directory
+* Change to the `/home/bob` directory:
    `cd /home/bob`
    * Navigate to the `/home/bob` directory.
 
-* Create a tar archive with absolute paths
+* Create a tar archive with absolute paths:
    `sudo tar cfP logs.tar /var/log/`
    * Archive the `/var/log/` directory with absolute paths to `logs.tar`.
 
-* Create a compressed tar.gz archive
+* Create a compressed tar.gz archive:
    `tar -zcvf project.tar.gz project`
    * Archive and compress the `project` directory into `project.tar.gz`.
 
-* Create a compressed tar.gz archive with absolute paths
+* Create a compressed tar.gz archive with absolute paths:
    `sudo tar czfP logs.tar.gz /var/log/`
    * Archive and compress `/var/log/` with absolute paths to `logs.tar.gz`.
 
-* Save a tar archive as plain text
+* Save a tar archive as plain text:
    `cat /home/bob/logs.tar > /home/bob/tar_data.txt`
    * Write the contents of `logs.tar` to `tar_data.txt`.
 
-* List contents of a tar archive
+* List contents of a tar archive:
    `tar tfP /home/bob/logs.tar > /home/bob/tar_data.txt`
    * List contents of `logs.tar` and save them to `tar_data.txt`.
 
-* View tar help options
+* View tar help options:
    `tar --help`
    * Display help information for the `tar` command.
 
-* Extract an archive to a specific directory
+* Extract an archive to a specific directory:
    `tar --extract --file /home/bob/archive.tar.gz --directory /tmp/`
    * Extract `archive.tar.gz` into the `/tmp/` directory.
 
-* Extract a tar archive (alternative syntax)
+* Extract a tar archive (alternative syntax):
    `tar xf /home/bob/archive.tar.gz -C /tmp`
    * Extract `archive.tar.gz` into `/tmp` using shorter syntax.
 
-* Run a script and save stdout output
+* Run a script and save stdout output:
    `bash /home/bob/script.sh >&1 | tee /home/bob/output_stdout.txt`
    * Execute `script.sh` and save the standard output to `output_stdout.txt`.
 
-* Redirect output of a script to a file
+* Redirect output of a script to a file:
    `sudo ./script.sh > /home/bob/output_stdout.txt`
    * Run `script.sh` and redirect its output to `output_stdout.txt`.
 
-* Save both stdout and stderr to the same file
+* Save both stdout and stderr to the same file:
    `bash /home/bob/script.sh 2>&1 | tee /home/bob/output.txt`
    * Run `script.sh` and save both stdout and stderr to `output.txt`.
 
-* Redirect stdout and stderr (alternative syntax)
+* Redirect stdout and stderr (alternative syntax):
    `sudo ./script.sh > /home/bob/output.txt 2>&1`
    * Run `script.sh`, redirecting both stdout and stderr to `output.txt`.
 
-* Redirect only stderr to a file
+* Redirect only stderr to a file:
    `sudo ./script.sh 2> /home/bob/output_errors.txt`
    * Run `script.sh` and save only stderr to `output_errors.txt`.
 
-* View the `bzip2` manual
+* View the `bzip2` manual:
    `man bzip2`
    * Access the manual page for the `bzip2` command.
 
-* Compress a file but keep the original
+* Compress a file but keep the original:
    `bzip2 --keep /home/bob/file.txt`
    * Compress `file.txt` with `bzip2` while keeping the original file.
 
-* Extract a tar.gz archive to a directory
+* Extract a tar.gz archive to a directory:
    `sudo tar xf /home/bob/archive.tar.gz -C /opt`
    * Extract `archive.tar.gz` to `/opt`.
 
-* Append contents of one file to another
+* Append contents of one file to another:
    `cat /home/bob/file.txt >> /home/bob/destination.txt`
    * Append the contents of `file.txt` to `destination.txt`.
 
-* Archive a file
+* Archive a file:
    `tar --create --file file.tar file`
    * Create a tar archive `file.tar` from `file`.
 
-* View gzip help options
+* View gzip help options:
    `gzip --help`
    * Display help information for the `gzip` command.
 
-* Compress a file with gzip
+* Compress a file with gzip:
    `gzip games.txt`
    * Compress `games.txt` using gzip.
 
-* View unxz help options
+* View unxz help options:
    `unxz --help`
    * Display help information for the `unxz` command.
 
-* Decompress an xz file
+* Decompress an xz file:
    `unxz lfcs.txt.xz`
    * Decompress `lfcs.txt.xz` to `lfcs.txt`.
 
-* View sort help options
+* View sort help options:
    `sort --help`
    * Display help information for the `sort` command.
 
-* Sort and remove duplicates from a file
+* Sort and remove duplicates from a file:
    `sort -du /home/bob/values.conf > /home/bob/values.sort`
    * Sort `values.conf` and remove duplicates, saving the output to `values.sort`.
 
-* Sort case-insensitively and remove duplicates
+* Sort case-insensitively and remove duplicates:
    `sort -duf /home/bob/values.conf > /home/bob/values.sorted`
    * Sort `values.conf` case-insensitively, remove duplicates, and save to `values.sorted`.
 
@@ -484,31 +484,31 @@ git merge documentation
 
 ### Summary
 
-* Generate a new private key and CSR
+* Generate a new private key and CSR:
    `openssl req -newkey rsa:4096 -keyout priv.key -out cert.csr`
    * Create a new RSA 4096-bit private key and generate a certificate signing request (CSR). Enter a password and default options as prompted.
 
-* Generate a self-signed certificate (option 1)
+* Generate a self-signed certificate (option 1):
    `openssl req -x509 -noenc -days 365 -keyout priv.key -out kodekloud.crt`
    * Create a self-signed certificate (`kodekloud.crt`) valid for 365 days using the private key (`priv.key`).
 
-* Generate a self-signed certificate (option 2)
+* Generate a self-signed certificate (option 2):
    `openssl req -newkey rsa:4096 -x509 -days 365 -nodes -keyout priv.key -out kodekloud.crt`
    * Create a new RSA 4096-bit key and self-signed certificate valid for 365 days, without encryption on the private key.
 
-* View certificate subject
+* View certificate subject:
    `openssl x509 -noout -subject -in my.crt`
    * Display the subject information of `my.crt` without showing other details.
 
-* Delete a Git branch
+* Delete a Git branch:
    `git branch --delete testing`
    * Delete the local Git branch named `testing`.
 
-* View Git commit logs with raw diff
+* View Git commit logs with raw diff:
    `git log --raw`
    * Display the commit history with changes in raw format.
 
-* Merge a branch into the current branch
+* Merge a branch into the current branch:
    `git merge documentation`
    * Merge the `documentation` branch into the current branch.
 

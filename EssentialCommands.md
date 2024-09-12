@@ -145,9 +145,71 @@ chmod 0755 new_dir/ -> (rwxr-xr-x)
 </details>
 
 ### Summary
-* 
-```shell
-```
+
+* Find files modified in the last 5 minutes
+   `find /dev/ -mmin -5`
+   * Search for files in `/dev/` directory modified in the last 5 minutes.
+
+* Remove group write permission
+   `chmod g-w somefile`
+   * Remove write permission for the group from the `somefile`.
+
+* Find files with group write permission but not world read/write
+   `sudo find /var/log/ -perm -g=w ! -perm /o=rw > /home/bob/data.txt`
+   * Search for files in `/var/log/` with group write permission but without world read/write permission, and save the output to `/home/bob/data.txt`.
+
+* Find files with specific permission code
+   `find /home/bob/ -perm 402 > /home/bob/secfile.txt`
+   * Search for files in `/home/bob/` with the permission code `402` and save the output to `/home/bob/secfile.txt`.
+
+* Set special permissions on a directory
+   `chmod u+s,g+s,o+t /home/bob/datadir/`
+   * Set the SUID, SGID, and sticky bit on the directory `/home/bob/datadir/`.
+
+* Find file by name and redirect result to file
+   `sudo find /usr/share/ | grep dogs.txt > /home/bob/dogs`
+   * Search for `dogs.txt` in `/usr/share/` and save the result to `/home/bob/dogs`.
+
+* Find file by name
+   `find /home/bob/ -name cats.txt`
+   * Search for a file named `cats.txt` in `/home/bob/`.
+
+* Copy file to another location
+   `sudo cp /home/bob/.etc/h/e/r/cats.txt /opt`
+   * Copy the `cats.txt` file from `/home/bob/.etc/h/e/r/` to `/opt`.
+
+* Find files by name and save result to file
+   `sudo find /var/ -name pets > /home/bob/pets.txt`
+   * Search for files named `pets` in `/var/` and save the result to `/home/bob/pets.txt`.
+
+* Find files with world-readable, writable, and executable permissions
+   `sudo find /var -type f -perm 0777 -print`
+   * Search for files in `/var/` with permission `0777` (read, write, and execute for everyone).
+
+* Find files with specific permissions and save to file
+   `sudo find /usr/ -type f -perm 0640 > /home/bob/.opt/permissions.txt`
+   * Search for files in `/usr/` with the permission code `0640` and save the result to `/home/bob/.opt/permissions.txt`.
+
+* Count files modified in the last 120 minutes
+   `sudo find /usr -type f -mmin -120 | wc -l`
+   * Find the number of files modified in the last 120 minutes in `/usr/`.
+
+* Find files larger than 20M in size
+   `sudo find /var -type f -size 20M`
+   * Search for files in `/var/` that are exactly 20MB in size.
+
+* Find files in a specific size range and save result to file
+   `sudo find /usr -type f -size +5M -size -10M > /home/bob/size.txt`
+   * Search for files in `/usr/` between 5MB and 10MB in size and save the result to `/home/bob/size.txt`.
+
+* Change permissions on a directory
+   `sudo chmod 0100 /home/bob/LFCS`
+   * Change permissions on `/home/bob/LFCS` to `0100` (owner can execute only).
+
+* Set directory permissions (rwxr-xr-x)
+   `chmod 0755 new_dir/`
+   * Set permissions on `new_dir/` to `rwxr-xr-x`.
+
 
 # Section 4
 

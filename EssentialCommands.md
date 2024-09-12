@@ -74,9 +74,47 @@ ls --full-time
 </details>
 
 ### Summary
-* 
-```shell
-```
+
+* Create Directory
+   `mkdir /home/bob/lfcs`
+   * Create a new directory `/home/bob/lfcs`.
+
+* Create an Empty File
+   `touch /home/bob/lfcs/lfcs.txt`
+   * Create an empty file `lfcs.txt` in the `/home/bob/lfcs` directory.
+
+* Copy Directory Recursively
+   `cp -r /tmp/Invoice/ /home/bob/`
+   * Copy the entire `/tmp/Invoice` directory recursively to `/home/bob/`.
+
+* Copy File with Attributes
+   `cp -p /home/bob/myfile.txt /home/bob/data/`
+   * Copy `myfile.txt` to the `/home/bob/data/` directory, preserving file attributes (like ownership, timestamps, etc.).
+
+* Move Files
+   `mv /home/bob/lfcs/* /home/bob/new-data/`
+   * Move all files from the `/home/bob/lfcs/` directory to `/home/bob/new-data/`.
+
+* Create Soft Link
+   `ln -s /tmp /home/bob/link_to_tmp`
+   * Create a symbolic (soft) link from `/tmp` to `/home/bob/link_to_tmp`.
+
+* Create Hard Link
+   `ln /tmp/hlink /home/bob/hlink`
+   * Create a hard link for the `/tmp/hlink` file in `/home/bob/`.
+
+* Rename File
+   `mv /home/bob/new_file /home/bob/old_file`
+   * Rename `new_file` to `old_file` in the `/home/bob/` directory.
+
+* Create Nested Directories
+   `mkdir -p /tmp/1/2/3/4/5/6/7/8/9`
+   * Create nested directories up to `/tmp/1/2/3/4/5/6/7/8/9` in a single command.
+
+* List Files with Full Time
+   `ls --full-time`
+   * List files in the directory showing full time information, including timestamps.
+
 
 # Section 3
 

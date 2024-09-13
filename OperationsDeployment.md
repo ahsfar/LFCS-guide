@@ -36,9 +36,39 @@ sudo shutdown -c
 
 
 ### Summary
-* 
-```shell
-```
+
+* View shutdown command help:
+   `shutdown --help`
+   * Display help options for the `shutdown` command.
+
+* Check the current default boot target:
+   `systemctl get-default`
+   * Show the current systemd default boot target (e.g., graphical or multi-user).
+
+* Set default boot target to graphical mode:
+   `sudo systemctl set-default graphical.target`
+   * Change the default boot target to graphical mode (GUI).
+
+* Reboot the system:
+   `sudo reboot`
+   * Reboot the system immediately.
+
+* Edit GRUB configuration:
+   `sudo nano /etc/default/grub`
+   * Open the GRUB configuration file for editing.
+
+* Install GRUB and redirect output to a file:
+   `grub-install /dev/vda > /home/bob/grub.txt 2>&1`
+   * Install GRUB on `/dev/vda` and save both stdout and stderr to `grub.txt`.
+
+* Save the default boot target to a file:
+   `systemctl get-default > /home/bob/boot-target.txt`
+   * Write the current default boot target to `boot-target.txt`.
+
+* Cancel a scheduled shutdown:
+   `sudo shutdown -c`
+   * Cancel any scheduled shutdown or reboot operation.
+
 
 ## Section 2
 <details><summary>show</summary>

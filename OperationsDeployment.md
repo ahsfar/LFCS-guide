@@ -271,9 +271,60 @@ sudo at 15:30 Aug 20 2024
 </details>
 
 ### Summary
-* 
-```shell
-```
+* Summary
+
+* Schedule a cron job to display a message at 4:00 PM on the 1st and 15th of each month:
+   `0 16 1,15 * * echo Timesheets Due > /dev/console`
+   * Schedule a cron job to output "Timesheets Due" to the console at 4:00 PM on the 1st and 15th of every month.
+
+* List current user's cron jobs:
+   `sudo crontab -l`
+   * Display all cron jobs for the current user.
+
+* Run anacron jobs immediately:
+   `sudo anacron -n -f`
+   * Run all anacron jobs immediately, ignoring the normal delay.
+
+* Schedule a task at 10:00 PM:
+   `at 10:00 PM`
+   * Schedule a command to run at 10:00 PM using the `at` command. Press `Ctrl+D` to finish.
+
+* List all scheduled `at` jobs:
+   `atq > /home/bob/at_jobs.txt`
+   * List all scheduled `at` jobs and save the output to `at_jobs.txt`.
+
+* Remove an `at` job:
+   `atrm 1`
+   * Remove the first job from the `at` queue.
+
+* Schedule a cron job to run at 9:30 PM every day:
+   `30 21 * * * /usr/bin/touch test_passed`
+   * Create a cron job to touch `test_passed` at 9:30 PM every day.
+
+* Edit the anacrontab file:
+   `sudo nano /etc/anacrontab`
+   * Open the anacrontab file for editing.
+
+* Add an anacron job to run a database cleanup:
+   `10      5       db_cleanup      /usr/bin/touch /root/anacron_created_this`
+   * Schedule a task named `db_cleanup` in anacron to run every 5 days with a 10-minute delay.
+
+* Schedule a task using the `at` command for a future date:
+   `sudo at 15:30 Aug 20 2024`
+   * Schedule a task to run at 3:30 PM on August 20, 2024, using `at`.
+
+* Schedule a monthly cron job:
+   `0 0 1 * * /usr/bin/touch monthly`
+   * Schedule a cron job to run at midnight on the 1st of each month and touch the `monthly` file.
+
+* Schedule a weekly cron job:
+   `0 11 * * 0 /usr/bin/touch weekly`
+   * Schedule a cron job to run at 11:00 AM every Sunday and touch the `weekly` file.
+
+* Restart nginx at 6:00 AM and 11:00 PM every Sunday:
+   `0 6,23 * * 0 sudo systemctl restart nginx`
+   * Schedule a cron job to restart the nginx service at 6:00 AM and 11:00 PM every Sunday.
+
 
 ## Section 5
 <details><summary>show</summary>

@@ -585,9 +585,124 @@ virt-install \
     --os-variant ubuntu22.04 \
     --graphics none \
     --network network=default
-
-
 ```
 
 </p>
 </details>
+
+### Summary
+
+* Forcefully stop a virtual machine:
+   `virsh destroy VM1`
+   * Forcefully shut down the virtual machine `VM1`.
+
+* Set a virtual machine to autostart:
+   `virsh autostart VM1`
+   * Enable the `VM1` virtual machine to start automatically on system boot.
+
+* List all Docker containers (including stopped ones):
+   `docker ps -a`
+   * Display all Docker containers, both running and stopped.
+
+* Run an NGINX container and map port 1234 to 80:
+   `docker run -d -p 1234:80 --name website docker.io/library/nginx:latest`
+   * Run an NGINX container in detached mode and map port 1234 to 80.
+
+* Remove a Docker container:
+   `docker rm website`
+   * Remove the Docker container named `website`.
+
+* Pull a Docker image:
+   `docker pull img_name`
+   * Pull the Docker image specified by `img_name`.
+
+* List all Docker images:
+   `docker images`
+   * Display all downloaded Docker images.
+
+* List all containers again (including stopped):
+   `docker ps -a`
+   * Show all containers, including stopped ones.
+
+* Stop a running Docker container:
+   `docker stop $CONTAINER_ID`
+   * Stop the container with the specified `CONTAINER_ID`.
+
+* Remove a stopped Docker container:
+   `docker rm $CONTAINER_ID`
+   * Remove the container with the given `CONTAINER_ID`.
+
+* Remove a Docker image:
+   `docker rmi $IMAGE_ID`
+   * Remove the Docker image with the specified `IMAGE_ID`.
+
+* Forcefully remove a Docker image:
+   `docker rmi $IMAGE_ID -f`
+   * Force remove the Docker image with the specified `IMAGE_ID`.
+
+* Remove all Docker containers:
+   `docker rm -f $(docker ps -a -q)`
+   * Forcefully remove all Docker containers.
+
+* Run an HTTPD container with always restart policy:
+   `docker run -d -p 9080:80 --restart always --name webinstance1 httpd`
+   * Run an HTTPD container on port 9080 with an always-restart policy.
+
+* List all virtual machines:
+   `virsh list --all`
+   * Display all virtual machines, including those that are stopped.
+
+* Start a virtual machine:
+   `virsh start VM1`
+   * Start the virtual machine `VM1`.
+
+* Force stop a virtual machine:
+   `virsh destroy VM1`
+   * Forcefully shut down the virtual machine `VM1`.
+
+* Undefine a virtual machine:
+   `virsh undefine VM1`
+   * Remove the virtual machine `VM1` from the configuration but keep the disk files.
+
+* Define a new virtual machine:
+   `virsh define /opt/testmachine2.xml`
+   * Create a virtual machine from the XML configuration file `/opt/testmachine2.xml`.
+
+* Start a virtual machine:
+   `virsh start VM2`
+   * Start the virtual machine `VM2`.
+
+* Set the maximum memory for a virtual machine:
+   `virsh setmaxmem VM2 80M --config`
+   * Set the maximum memory for `VM2` to 80MB in its configuration.
+
+* Set the memory for a running virtual machine:
+   `virsh setmem VM2 80M --config`
+   * Change the current memory of `VM2` to 80MB.
+
+* Shut down a virtual machine gracefully:
+   `virsh shutdown VM2`
+   * Gracefully shut down the virtual machine `VM2`.
+
+* Restart a virtual machine:
+   `virsh destroy VM2 && virsh start VM2`
+   * Force stop and then start `VM2` again.
+
+* Install a virtual machine from a disk image:
+   `virt-install --name kk-ubuntu --memory=1024 --vcpu=1 --graphics=none --disk path=/var/lib/libvirt/images/ubuntu-22.04-minimal-cloudimg-amd64.img --os-variant=ubuntu22.04 --network network=default --import`
+   * Install a virtual machine named `kk-ubuntu` with 1GB of memory, 1 vCPU, and an imported disk image.
+
+* Install a virtual machine with multi-line options:
+   ```bash
+   virt-install \
+      --name kk-ubuntu \
+      --memory 1024 \
+      --vcpus 1 \
+      --disk path=/var/lib/libvirt/images/ubuntu-22.04-minimal-cloudimg-amd64.img\
+      --import \
+      --os-variant ubuntu22.04 \
+      --graphics none \
+      --network network=default
+   ```
+    * Install a virtual machine named kk-ubuntu with specified options, using multi-line command syntax.
+

@@ -424,9 +424,31 @@ sudo xfs_repair -n /dev/vdb > /home/bob/fscheck 2>&1
 </details>
 
 ### Summary
-* 
-```shell
-```
+
+* Check disk usage of the root filesystem:
+   `df /`
+   * Display disk space usage for the root (`/`) filesystem.
+
+* Check the size of the `/bin` directory:
+   `du -sh /bin/`
+   * Show the total size of the `/bin` directory in a human-readable format.
+
+* Display free memory in megabytes:
+   `free --mega`
+   * Show the system's memory usage, with output in megabytes.
+
+* Show system uptime:
+   `uptime`
+   * Display how long the system has been running, along with the number of logged-in users and the load averages.
+
+* Display CPU architecture details:
+   `lscpu`
+   * Show information about the CPU architecture and processing units.
+
+* Perform a read-only XFS filesystem check and save output:
+   `sudo xfs_repair -n /dev/vdb > /home/bob/fscheck 2>&1`
+   * Perform a read-only check of the XFS filesystem on `/dev/vdb` and save the output to `fscheck`.
+
 
 ## Section 7
 <details><summary>show</summary>

@@ -485,9 +485,59 @@ sudo restorecon -R /var/log/
 </details>
 
 ### Summary
-* 
-```shell
-```
+
+* Check SELinux security context of processes using `ps`:
+   `ps auxZ | grep sshd`
+   * Display processes with their SELinux security context and filter for `sshd`.
+
+* Open a file for editing with `vi`:
+   `vi /home/bob/sshd`
+   * Open `/home/bob/sshd` for editing with the `vi` editor.
+
+* Example SELinux context:
+   `system_u:system_r:initrc_t:s0`
+   * Example of an SELinux security context.
+
+* Disable kernel module loading:
+   `sysctl -w kernel.modules_disabled=1`
+   * Temporarily disable the ability to load kernel modules.
+
+* List SELinux context for `/bin/sudo`:
+   `ls -Z /bin/sudo`
+   * Show the SELinux security context for `/bin/sudo`.
+
+* Enable Segment Routing on the loopback interface:
+   `sysctl -w net.ipv6.conf.lo.seg6_enabled=1`
+   * Temporarily enable Segment Routing (SRv6) on the loopback interface.
+
+* Edit sysctl configuration:
+   `vi /etc/sysctl.conf`
+   * Open `/etc/sysctl.conf` to edit system parameters.
+
+* Set the system swappiness value:
+   `vm.swappiness=10`
+   * Set the swappiness value to `10`, which controls how aggressively the system swaps memory.
+
+* Apply sysctl settings:
+   `sysctl -p`
+   * Reload and apply settings from `/etc/sysctl.conf`.
+
+* Change SELinux file context temporarily:
+   `chcon -t httpd_sys_content_t /var/index.html`
+   * Temporarily change the SELinux type of `/var/index.html` to `httpd_sys_content_t`.
+
+* Set SELinux to permissive mode:
+   `sudo setenforce 0`
+   * Temporarily switch SELinux to permissive mode.
+
+* List all SELinux users:
+   `semanage user -l`
+   * Display a list of all SELinux users.
+
+* Restore default SELinux security contexts:
+   `sudo restorecon -R /var/log/`
+   * Restore the default SELinux context recursively for files in `/var/log/`.
+
 
 ## Section 8
 <details><summary>show</summary>

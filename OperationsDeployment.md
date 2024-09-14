@@ -355,9 +355,56 @@ tmux
 </details>
 
 ### Summary
-* 
-```shell
-```
+
+* Search for Apache HTTP Server:
+   `sudo apt search "apache http server"`
+   * Search the package repository for Apache HTTP Server.
+
+* Update package lists:
+   `sudo apt update`
+   * Refresh the package lists to get the latest versions.
+
+* Install Apache2:
+   `sudo apt install apache2`
+   * Install the Apache2 web server.
+
+* Find the package that provides `/bin/ls` and save it to a file:
+   `dpkg -S /bin/ls | cut -d: -f1 > package.txt`
+   * Find the package providing `/bin/ls` and save the package name to `package.txt`.
+
+* List installed files of `coreutils` in `/bin` that start with 'u':
+   `dpkg-query -L coreutils | grep -i "/bin" | cut -d/ -f4 | grep '^u' > name.txt`
+   * List the files from `coreutils` in `/bin` starting with 'u' and save them to `name.txt`.
+
+* List `coreutils` files in `/bin` and filter by names starting with 'u':
+   `dpkg --listfiles coreutils | grep ^/bin | cut -d/ -f3 | grep '^u' > name.txt`
+   * List all files installed by `coreutils` in `/bin` starting with 'u' and save to `name.txt`.
+
+* Remove `ziptool` package and its dependencies:
+   `sudo apt-get remove --auto-remove -y ziptool`
+   * Uninstall `ziptool` along with any unused dependencies.
+
+* Edit the APT sources list:
+   `sudo nano /etc/apt/sources.list`
+   * Open the APT sources list for editing.
+
+* Add a new APT source:
+   `deb http://us.archive.ubuntu.com/ubuntu/ focal main`
+   * Add the Ubuntu focal main repository to your sources list.
+
+* Update package lists again:
+   `sudo apt update`
+   * Refresh the package lists to reflect changes made in the sources.
+
+* Build and install an application (tmux):
+   ```bash
+   cd tmux
+   sudo ./autogen.sh
+   sudo ./configure
+   sudo make
+   sudo make install
+  ```
+
 
 ## Section 6
 <details><summary>show</summary>

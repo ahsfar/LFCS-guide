@@ -108,9 +108,50 @@ WantedBy=multi-user.target
 </details>
 
 ### Summary
-* 
-```shell
-```
+
+* Create a compressed tar archive:
+   `tar acf archive.tar.gz dir1`
+   * Archive and compress `dir1` into `archive.tar.gz`.
+
+* Check the status of the SSH service and search for the PID:
+   `systemctl status sshd.service | grep -i pid`
+   * Display the status of `sshd.service` and search for the process ID (PID).
+
+* Check if SSH service is enabled:
+   `systemctl is-enabled sshd.service`
+   * Check whether the SSH service is enabled at boot.
+
+* Change directory permissions to execute-only for owner:
+   `chmod 0100 /home/bob/dir8`
+   * Set permissions on `/home/bob/dir8` to execute-only for the owner.
+
+* Save SSH service status to a file:
+   `systemctl status sshd.service > /home/bob/service.txt`
+   * Write the status of `sshd.service` to `service.txt`.
+
+* View systemctl help:
+   `systemctl --help`
+   * Display help options for the `systemctl` command.
+
+* Mask the Apache2 service:
+   `sudo systemctl mask apache2`
+   * Mask the Apache2 service, preventing it from being started manually or automatically.
+
+* Unmask the Apache2 service:
+   `sudo systemctl unmask apache2`
+   * Unmask the Apache2 service, allowing it to be started again.
+
+* Service Configuration:
+
+  ```shell
+  [Unit] Description=KodeKloud Service After=sshd.service
+  
+  [Service] ExecStart=/usr/local/bin/kkloud ExecStop=/usr/local/bin/kkloud --savedata KillMode=process Restart=always Type=simple
+  
+  [Install] WantedBy=multi-user.target
+  ```
+  * Configuration file for `kkloud.service` with details for starting, stopping, and managing the service in a multi-user environment.
+
 
 ## Section 3
 

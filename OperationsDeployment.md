@@ -183,9 +183,59 @@ sleep 3000 &
 </details>
 
 ### Summary
-* 
-```shell
-```
+
+* Display detailed process information (BSD style):
+   `ps lax`
+   * Show detailed information about all processes with extended options.
+
+* Display detailed process information (GNU style):
+   `ps aux`
+   * Show all running processes with their user and resource usage.
+
+* Change the priority of a process:
+   `sudo renice 9 <PID>`
+   * Change the nice value of a process to 9 for the given PID.
+
+* List open files by process ID:
+   `sudo lsof -p 1 > /home/bob/files.txt`
+   * List all open files for process ID 1 and save the output to `files.txt`.
+
+* Show the last 20 SSH service logs without pagination:
+   `sudo journalctl --unit=ssh.service -n 20 --no-pager`
+   * Display the last 20 lines of logs for the SSH service without paging.
+
+* Find the PID of `rpcbind` and save to a file:
+   `pgrep -a rpcbind | cut -f1 -d' ' > /home/bob/pid.txt`
+   * Find the PID of `rpcbind` and save it to `pid.txt`.
+
+* Check the status of the SSH service:
+   `systemctl status ssh.service`
+   * Display the current status of the SSH service.
+
+* Send a SIGHUP signal to a process:
+   `sudo kill -SIGHUP 1399`
+   * Send the SIGHUP signal to process with PID 1399.
+
+* Search for 'reboot' in system logs:
+   `sudo grep -r --text 'reboot' /var/log/ > reboot.log`
+   * Recursively search for the word 'reboot' in `/var/log/` and save results to `reboot.log`.
+
+* Show all systemd logs with error priority:
+   `sudo journalctl -p err > /home/bob/.priority/priority.log`
+   * Display logs with error priority and save them to `priority.log`.
+
+* Show systemd logs with info priority and filter by '^c':
+   `sudo journalctl -p info -g '^c' > .priority/boot.log`
+   * Display logs with info priority, filtered by lines starting with 'c', and save to `boot.log`.
+
+* Show resource usage for process ID 1:
+   `ps u 1 > /home/bob/resources.txt`
+   * Display resource usage for process 1 and save to `resources.txt`.
+
+* Run a process in the background for 3000 seconds:
+   `sleep 3000 &`
+   * Run the `sleep` command for 3000 seconds in the background.
+
 
 ## Section 4
 <details><summary>show</summary>

@@ -270,9 +270,51 @@ exportfs -r
 
 
 ### Summary
-* 
-```shell
-```
+
+* Edit the NFS exports file:
+   `vi /etc/exports`
+   * Open `/etc/exports` to configure NFS shared directories.
+
+* Example NFS export entry:
+   `/home 10.0.0.0/24(ro)`
+   * Share `/home` as read-only for the `10.0.0.0/24` subnet.
+
+* Apply NFS export changes:
+   `sudo exportfs -r`
+   * Re-export all directories in `/etc/exports` without restarting the NFS service.
+
+* Restart the NFS server:
+   `systemctl restart nfs-server`
+   * Restart the NFS server to apply changes.
+
+* Verify NFS export configuration for `/home`:
+   `grep "/home" /etc/exports`
+   * Search for `/home` in the `/etc/exports` file to verify export configurations.
+
+* Mount an NFS share locally:
+   `mount 127.0.0.1:/home /mnt`
+   * Mount the NFS share from `127.0.0.1:/home` to `/mnt`.
+
+* Edit `/etc/fstab` to mount NFS share automatically:
+   `vi /etc/fstab`
+   * Open `/etc/fstab` to configure automatic mounting.
+
+* Example NFS `/etc/fstab` entry:
+   `127.0.0.1:/home /mnt nfs defaults 0 0`
+   * Automatically mount the NFS share from `127.0.0.1:/home` to `/mnt` at boot.
+
+* Add multiple NFS export rules:
+   `vi /etc/exports`
+   * Open `/etc/exports` to add multiple export rules.
+
+* Example multi-host NFS export entry:
+   `/home 192.0.0.0/24(ro) 127.0.0.10(rw,no_root_squash)`
+   * Export `/home` as read-only for the `192.0.0.0/24` subnet and as read-write with `no_root_squash` for `127.0.0.10`.
+
+* Apply NFS export changes:
+   `exportfs -r`
+   * Re-export all configured directories without restarting the NFS service.
+
 
 ## Section 5
 

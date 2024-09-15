@@ -347,9 +347,63 @@ sudo lvremove volume1/smalldata
 
 
 ### Summary
-* 
-```shell
-```
+
+* Install LVM2:
+   `sudo apt install lvm2 -y`
+   * Install the LVM2 package for managing Logical Volume Management (LVM).
+
+* Scan disks for LVM physical volumes:
+   `sudo lvmdiskscan`
+   * Scan the system for available physical disks for LVM.
+
+* Create physical volumes:
+   `pvcreate /dev/vdb /dev/vdc`
+   * Initialize `/dev/vdb` and `/dev/vdc` as physical volumes for LVM.
+
+* Display physical volumes:
+   `pvs`
+   * Show information about all physical volumes on the system.
+
+* Open a file for editing:
+   `vi /root/pvsize`
+   * Open `/root/pvsize` for editing (e.g., to save size info).
+
+* Remove a physical volume:
+   `pvremove /dev/vdc`
+   * Remove the LVM label from `/dev/vdc` and wipe the physical volume.
+
+* Create a volume group:
+   `vgcreate volume1 /dev/vdb`
+   * Create a volume group named `volume1` using `/dev/vdb` as the physical volume.
+
+* Extend a volume group:
+   `vgextend volume1 /dev/vdc`
+   * Add `/dev/vdc` to the `volume1` volume group.
+
+* Reduce a volume group:
+   `vgreduce volume1 /dev/vdc`
+   * Remove `/dev/vdc` from the `volume1` volume group.
+
+* Display volume groups:
+   `vgs`
+   * Show information about all volume groups on the system.
+
+* Create a logical volume:
+   `lvcreate --size 0.5G --name smalldata volume1`
+   * Create a logical volume named `smalldata` with a size of 0.5 GB in the `volume1` group.
+
+* Resize a logical volume:
+   `lvresize --size 752M volume1/smalldata`
+   * Resize the logical volume `smalldata` in `volume1` to 752 MB.
+
+* Format a logical volume with XFS:
+   `mkfs.xfs /dev/volume1/smalldata`
+   * Format the logical volume `smalldata` in `volume1` with the XFS file system.
+
+* Remove a logical volume:
+   `sudo lvremove volume1/smalldata`
+   * Remove the logical volume `smalldata` from the `volume1` volume group.
+
 
 ## Section 6
 

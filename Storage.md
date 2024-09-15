@@ -141,9 +141,53 @@ xfs_admin -L "SwapFS" /dev/vdb
 
 
 ### Summary
-* 
-```shell
-```
+
+* Format a disk with XFS and label it:
+   `mkfs.xfs -L "DataDisk" /dev/vdb`
+   * Format `/dev/vdb` with the XFS file system and label it "DataDisk."
+
+* Format a disk with ext4 and specify the number of inodes:
+   `mkfs.ext4 -N 2048 /dev/vdc`
+   * Format `/dev/vdc` with the ext4 file system and create 2048 inodes.
+
+* Mount a disk to a directory:
+   `mount /dev/vdb /mnt`
+   * Mount the `/dev/vdb` device to the `/mnt` directory.
+
+* List block devices and their mount points:
+   `lsblk`
+   * Display information about block devices and their mount points.
+
+* Unmount a device:
+   `umount /mnt`
+   * Unmount the device mounted at `/mnt`.
+
+* Create a new directory:
+   `mkdir /test`
+   * Create the directory `/test`.
+
+* Edit the `/etc/fstab` file with `nano`:
+   `sudo nano /etc/fstab`
+   * Open the `/etc/fstab` file in the `nano` text editor to manage filesystem mounts.
+
+* View the contents of `/etc/fstab`:
+   `cat /etc/fstab`
+   * Display the contents of the `/etc/fstab` file.
+
+* Example entry for `/etc/fstab`:
+    ```shell
+    <file system> <mount point>   <type>  <options>       <dump>  <pass>
+    /dev/disk/by-uuid/8ee8caa8-cef0-4e5c-a626-03f2a0f13c00 / ext4 defaults 0 1
+   /swap.img       none    swap    sw      0       0
+   /dev/vdc /test ext4 defaults 0 2
+   /dev/vdb none swap defaults 0 0
+    ```
+
+* Change the label of an XFS file system:
+  `xfs_admin -L "SwapFS" /dev/vdb`
+  * Change the label of the XFS file system on `/dev/vdb` to "SwapFS."
+
+
 
 ## Section 3
 

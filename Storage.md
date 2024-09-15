@@ -432,6 +432,36 @@ setfacl --recursive --modify user:john:rwx collection/
 
 
 ### Summary
-* 
-```shell
-```
+
+* Check RAID status:
+   `cat /proc/mdstat`
+   * Display the current status of RAID arrays and devices.
+
+* View access control lists (ACLs) of a file:
+   `getfacl archive`
+   * Show the ACLs for the file `archive`.
+
+* Create a RAID 1 (mirrored) array:
+   `sudo mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/vd[bc]`
+   * Create a RAID 1 array using two devices (`/dev/vdb` and `/dev/vdc`) and name it `/dev/md0`.
+
+* List block devices:
+   `lsblk`
+   * Display information about block devices in a tree format.
+
+* Modify ACLs to give user `john` read and write permissions:
+   `setfacl --modify user:john:rw specialfile`
+   * Grant read and write permissions to the user `john` on the file `specialfile`.
+
+* Remove ACLs for user `john`:
+   `setfacl --remove user:john specialfile`
+   * Remove ACL entries for the user `john` on `specialfile`.
+
+* Modify ACLs to give the group `mail` read and execute permissions:
+   `setfacl --modify group:mail:rx specialfile`
+   * Grant read and execute permissions to the group `mail` on `specialfile`.
+
+* Recursively modify ACLs to give user `john` read, write, and execute permissions:
+   `setfacl --recursive --modify user:john:rwx collection/`
+   * Recursively grant read, write, and execute permissions to the user `john` on the `collection/` directory and its contents.
+

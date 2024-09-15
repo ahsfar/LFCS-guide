@@ -42,9 +42,67 @@ cfdisk
 
 
 ### Summary
-* 
-```shell
-```
+
+* List block devices:
+   `lsblk`
+   * Display information about all block devices on the system.
+
+* Create a swap area on `/dev/sdb`:
+   `sudo mkswap /dev/sdb`
+   * Initialize the partition `/dev/sdb` as swap space.
+
+* Check file system disk usage:
+   `df -TH`
+   * Show disk usage information for all mounted filesystems, with sizes in human-readable format and file system type.
+
+* Display active swap space:
+   `swapon -h`
+   * Show the currently active swap spaces in a human-readable format.
+
+* View detailed swap space information:
+   `swapon -s`
+   * Display detailed information about all swap spaces.
+
+* Open `fdisk` to partition `/dev/vdb`:
+   `sudo fdisk /dev/vdb`
+   * Open `fdisk` to manage partitions on `/dev/vdb`.
+
+* Use `m` for the help menu in `fdisk`:
+   `m`
+   * Display the help menu in `fdisk`.
+
+* Create a new partition in `fdisk`:
+   `n`
+   * Create a new partition.
+
+* Enter default values for the partition size and set it to `+10M`:
+   `+10M`
+   * Set the size of the new partition to 10MB.
+
+* Write partition changes:
+   `w`
+   * Write changes and exit `fdisk`.
+
+* Create a swap space on the new partition `/dev/vdb2`:
+   `mkswap /dev/vdb2`
+   * Initialize `/dev/vdb2` as swap space.
+
+* Enable the new swap space:
+   `swapon /dev/vdb2`
+   * Activate the swap space on `/dev/vdb2`.
+
+* View swap space status:
+   `swapon -s`
+   * Display the status of active swap spaces.
+
+* Disable a swap space:
+   `swapoff /dev/vdb2`
+   * Disable the swap space on `/dev/vdb2`.
+
+* Open the `cfdisk` partition manager:
+   `cfdisk`
+   * Start the `cfdisk` utility to manage disk partitions with a graphical interface.
+
 
 ## Section 2
 

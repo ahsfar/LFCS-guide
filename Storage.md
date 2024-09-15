@@ -211,9 +211,39 @@ vi /etc/fstab
 
 
 ### Summary
-* 
-```shell
-```
+
+* View currently mounted file systems:
+   `cat /proc/mounts`
+   * Display information about all mounted file systems from `/proc/mounts`.
+
+* Find mounted file systems:
+   `findmnt`
+   * Display a tree of mounted file systems.
+
+* Find where a specific device is mounted:
+   `findmnt /dev/vda1`
+   * Display the mount point for `/dev/vda1`.
+
+* Unmount a device:
+   `umount /mnt`
+   * Unmount the device mounted at `/mnt`.
+
+* Mount a device with specific options:
+   `mount /dev/vdb1 /mnt/ -o ro,noexec,nosuid`
+   * Mount `/dev/vdb1` to `/mnt` with read-only, no execution, and no SUID options.
+
+* Remount a device as read-write:
+   `mount -o remount,rw /dev/vdb1 /mnt`
+   * Remount `/dev/vdb1` as read-write on `/mnt`.
+
+* Edit the `/etc/fstab` file:
+   `vi /etc/fstab`
+   * Open `/etc/fstab` for editing to manage filesystem mounts.
+
+* Example `/etc/fstab` entry:
+   `/dev/vdb1 /mnt ext4 defaults,ro 0 2`
+   * Mount `/dev/vdb1` to `/mnt` with the ext4 file system in read-only mode.
+
 
 ## Section 4
 

@@ -12,7 +12,7 @@
 
 
 ## Section 1
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash
@@ -127,7 +127,7 @@ sudo vim /etc/systemd/resolved.conf
 
 
 ## Section 2
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash
@@ -163,7 +163,7 @@ sudo ufw insert 1 deny from 10.0.0.19
 `sudo ufw insert 1 deny from 10.0.0.19`
 
 ## Section 3
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash

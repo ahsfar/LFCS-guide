@@ -14,7 +14,7 @@
 
 
 ## Section 1
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash
@@ -71,7 +71,7 @@ sudo shutdown -c
 
 
 ## Section 2
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash
@@ -155,7 +155,7 @@ WantedBy=multi-user.target
 
 ## Section 3
 
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash
@@ -238,7 +238,7 @@ sleep 3000 &
 
 
 ## Section 4
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash
@@ -327,7 +327,7 @@ sudo at 15:30 Aug 20 2024
 
 
 ## Section 5
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash
@@ -407,7 +407,7 @@ tmux
 
 
 ## Section 6
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash
@@ -451,7 +451,7 @@ sudo xfs_repair -n /dev/vdb > /home/bob/fscheck 2>&1
 
 
 ## Section 7
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash
@@ -540,7 +540,7 @@ sudo restorecon -R /var/log/
 
 
 ## Section 8
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash

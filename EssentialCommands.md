@@ -9,7 +9,7 @@
 - Work with SSL certificates
 
 # Section 1
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash
@@ -53,7 +53,7 @@ apropos NFS mount configuration | grep -i 'NFS mount' | grep -i Configuration | 
 
 # Section 2
 
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash
@@ -118,7 +118,7 @@ ls --full-time
 
 # Section 3
 
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash
@@ -213,7 +213,7 @@ chmod 0755 new_dir/ -> (rwxr-xr-x)
 
 # Section 4
 
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash
@@ -298,7 +298,7 @@ tail -500 /home/bob/textfile  > /home/bob/last
 # Section 5
 
 
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash
@@ -461,7 +461,7 @@ sort -duf /home/bob/values.conf > /home/bob/values.sorted
 
 # Section 6
 
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash

@@ -11,7 +11,7 @@
 
 ## Section 1
 
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash
@@ -106,7 +106,7 @@ cfdisk
 
 ## Section 2
 
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash
@@ -191,7 +191,7 @@ xfs_admin -L "SwapFS" /dev/vdb
 
 ## Section 3
 
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash
@@ -247,7 +247,7 @@ vi /etc/fstab
 
 ## Section 4
 
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash
@@ -318,7 +318,7 @@ exportfs -r
 
 ## Section 5
 
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash
@@ -407,7 +407,7 @@ sudo lvremove volume1/smalldata
 
 ## Section 6
 
-<details><summary>show</summary>
+<details><summary>show commands</summary>
 <p>
   
 ```bash

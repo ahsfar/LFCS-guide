@@ -29,5 +29,5 @@ This guide cannot be considered as unique source of information to prepare LFCS 
   
 
 # PR?
-### Are you thinking to do PR? If you feel there is an error or something can be improved or more questions or solutions can be provided
+Are you thinking to do PR? If you feel there is an error or something can be improved or more questions or solutions can be provided
 Surely feel free to PR and edit/add questions and solutions, but please stick to the existing format.

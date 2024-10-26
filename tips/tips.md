@@ -1,4 +1,4 @@
-# LFCS Exam Tips
+# Tips
 
 Following or some helpful tips I've noticed while preparing for LFCS Exam.
 
@@ -16,3 +16,17 @@ This is very important if you are not working professionally with linux.
 - Practice as much as possible (Time yourself)
 - When you book exam you get killer.sh two sessions that's very similar to actual exam format. (It's generally harder than real exam)
 
+#  Experience - Pending
+
+## 1. Exam 
+
+- Online Proctored
+- Pending
+
+
+## 2. Environment
+
+Pending 
+
+
+[Badge](https://www.credly.com/badges//public_url)

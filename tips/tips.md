@@ -4,8 +4,8 @@ Following or some helpful tips I've noticed while preparing for LFCS Exam.
 
 ## 1. Practice
 
-Practice commands and arguments and know the tools. Do linux challenges labs or practice exams e.g. from KodeKloud.
-I would recommend installing Linux distro VM in your personal machine if you don't have one already and play around with that just get comfortable and use all the commands while practicing.
+- Practice commands and arguments and know the tools. Do linux challenges labs or practice exams e.g. from KodeKloud.
+- I would recommend installing Linux distro VM in your personal machine if you don't have one already and play around with that just get comfortable and use all the commands while practicing.
 
 ## 2. Familiarity with man
 

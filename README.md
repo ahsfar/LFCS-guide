@@ -19,11 +19,11 @@ This guide cannot be considered as unique source of information to prepare LFCS 
 
 * Online
 * Duration of Exam 2 hours 
-- Includes 12 Month Exam Eligibility with one retake
-- Price: $395 USD - Normally there are discounts and bundle offers 
-- Performance-Based Exam
-- Exam simulator - online proctored
-- 2 Years (Validity)
+* Includes 12 Month Exam Eligibility with one retake
+* Price: $395 USD - Normally there are discounts and bundle offers 
+* Performance-Based Exam
+* Exam simulator - online proctored
+* 2 Years (Validity)
 
 - [Official LFCS Exam Info Link](https://training.linuxfoundation.org/certification/linux-foundation-certified-sysadmin-lfcs/)
   

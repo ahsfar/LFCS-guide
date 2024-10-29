@@ -17,8 +17,8 @@ This guide cannot be considered as unique source of information to prepare LFCS 
 
 # Exam
 
-- Online
-- Duration of Exam 2 hours 
+* Online
+* Duration of Exam 2 hours 
 - Includes 12 Month Exam Eligibility with one retake
 - Price: $395 USD - Normally there are discounts and bundle offers 
 - Performance-Based Exam

@@ -35,3 +35,7 @@ Pending
 
 
 [Badge](https://www.credly.com/badges//public_url)
+
+## 3. Discounts
+
+There are normally discounts on courses, certs or bundles from Linux Foundation. So, always look out for that. 

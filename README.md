@@ -1,7 +1,7 @@
 # Linux Foundation Certified System Administrator (LFCS) - Guide
 Linux Foundation Certified System Administrator (LFCS) - Notes, Tips, Lab practices for exam from online resources and KodeKloud LFCS course.
 
-This guide cannot be considered as unique source of information to prepare LFCS exam, but can be used as guideline to understand which topics you must be able to manage to pass the exam.
+This guide cannot be considered as unique source of information to prepare LFCS exam, but can be used as guideline to understand which topics you must be able to manage to pass the exam. Always check the updated resources.
 
 # Domains & Competencies
 

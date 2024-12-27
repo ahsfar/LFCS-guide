@@ -39,3 +39,4 @@ Pending
 ## 3. Discounts
 
 There are normally discounts on courses, certs or bundles from Linux Foundation. So, always look out for that. 
+Got 50% of on Cyber Monday Deals. That's probably the biggest discount.

@@ -51,12 +51,12 @@ Is the information correct? [Y/n] y
 
 sudo usermod -aG sudo mary
 groups mary
-# mary : mary sudo
+mary : mary sudo
 sudo usermod -g developers mary
 sudo usermod -s /bin/bash mary
-# usermod: no changes
+usermod: no changes
 grep '^mary:' /etc/passwd
-# mary:x:1005:1005:,,,:/home/mary:/bin/bash
+mary:x:1005:1005:,,,:/home/mary:/bin/bash
 
 * 5:
 ls /proc/sys/kernel/
@@ -77,19 +77,15 @@ sudo mount /dev/vdb2 /mnt -o ro
 * 7:
 sudo pvcreate /dev/vdc /dev/vdd
 sudo pvdisplay
-
 sudo vgcreate volume1 /dev/vdd
 sudo vgdisplay
 sudo vgextend volume1 /dev/vdd
-
 sudo lvcreate -n website_files -L 3G volume1
 
 * 8:
 
 git init
-
 git remote add origin https://github.com/kodekloudhub/git-for-beginners-course.git
-
 git pull origin master
 
 
@@ -100,22 +96,19 @@ docker ps -a
 docker rm
 
 docker images
-
 docker build -f Dockerfile . -t kodekloudwebserv
-
 docker run kodekloudwebserv
-
 docker run -d --publish 8081:80 --name webserver2 kodekloudwebserv
 
 
 * 10:
 
 sudo nano /etc/exports
-
 /home 10.0.0.0/24(ro)
 
 
 * 11:
+
 
 
 ## LFCS Mock Exam 2:
@@ -153,13 +146,10 @@ sudo sh -c "ip a | grep -i 10.5.5.2 | awk '{print $NF}' > /opt/interface.txt"
 groups jane
 sudo usermod -g jane jane
 sudo usermod -aG sudo jane
-
 sudo mkdir /home/jane/
 ls -l /home
 sudo chown jane:jane /home/jane/
-
 sudo usermod -s /bin/bash jane
-
 sudo passwd jane
 
 

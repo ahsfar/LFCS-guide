@@ -2,7 +2,7 @@
 
 ## LFCS Mock Exam 1:
 
-1:
+* 1:
 ls -ld /opt
 drwxr-xr-x. 3 root root 4096 Dec 15 17:22 /opt
 sudo find . -type f -perm u+x | sudo tee /opt/foundthem.txt

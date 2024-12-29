@@ -251,4 +251,101 @@ docker run -d -p 80:80 --name apache_container --restart on-failure:3 httpd
 nslcd
 
 
+## LFCS Mock Exam 3:
+
+* 1:
+
+sudo rm /etc/nginx/sites-enabled/default
+
+sudo nano /etc/nginx/sites-available/proxy.conf
+
+proxy_pass http://google.com;
+
+sudo ln -s /etc/nginx/sites-available/proxy.conf /etc/nginx/sites-enabled/proxy.conf
+
+sudo systemctl reload nginx.service
+
+
+* 2:
+
+sudo nano /etc/crontab 
+0 4 15 * *       su - mary -c  'find /home/mary/ -type d -empty -delete'
+
+* 3:
+
+sudo vim /etc/netplan/extrainterface.yaml
+
+network:
+  version: 2
+  ethernets:
+    enp0s10:
+      dhcp4: false
+      dhcp6: false
+      addresses:
+        - 10.198.0.5/24
+      routes:
+        - to: 192.168.0.0/24
+          via: 10.198.0.1
+
+sudo netplan apply
+ip route
+
+sudo ip addr add 10.5.0.9/24 dev enp0s10
+
+* 4:
+
+sudo sysctl -w vm.swappiness=30
+
+sudo nano /etc/sysctl.conf
+vm.dirty_ratio=15
+
+* 5:
+
+sudo groupadd developers
+sudo useradd jane
+sudo usermod -g developers jane
+groups jane
+sudo usermod -aG jane jane
+sudo usermod -aG sudo jane
+sudo usermod -s /bin/bash jane
+
+* 6:
+
+sudo nano /etc/ssh/sshd_config
+
+PasswordAuthentication no
+
+Match User john
+  PasswordAuthentication yes
+
+* 7:
+
+find /usr -type f -size +1G
+sudo find /usr -type f -size +1G -exec rm {} \;
+
+* 8:
+
+sudo vgcreate VG1 /dev/vdb /dev/vdc
+sudo vgdisplay
+sudo pvdisplay
+sudo lvcreate -L 6G VG1 --name LV1
+sudo lvdisplay
+
+* 9:
+
+sudo iptables -t nat -A PREROUTING -s 10.11.12.0/24 -d 10.9.9.1 
+sudo iptables -t nat -A POSTROUTING -s 10.11.12.0/24 -j MASQUERADE
+
+* 10:
+
+cat Dockerfile 
+FROM nginx
+COPi index.html /usr/share/nginx/html/index.html
+
+docker build -f Dockerfile . -t kodekloud/nginx_kodekloud:1.0
+
+sudo docker run -d -p 81:80 --name kodekloud_webserv kodekloud/nginx_kodekloud:1.0
+
+* 11:
+
 

@@ -346,6 +346,93 @@ docker build -f Dockerfile . -t kodekloud/nginx_kodekloud:1.0
 
 sudo docker run -d -p 81:80 --name kodekloud_webserv kodekloud/nginx_kodekloud:1.0
 
+
+## LFCS Mock Exam 4:
+
+* 1:
+
+  
+* 2:
+
+sudo usermod -s /bin/bash jane
+grep '^jane:' /etc/passwd
+
+sudo usermod -aG sudo jane
+groups jane
+
+  
+* 3:
+
+sudo crontab -e -u john
+0 3 * * 1,6 tar acf /home/john/www-snapshot.tgz /var/www
+sudo crontab -l -u john
+
+  
+* 4:
+
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    eth2:
+      dhcp4: no
+    eth3:
+      dhcp4: no
+  bonds:
+    bond0:
+      dhcp4: yes
+      interfaces:
+        - eth2
+        - eth3
+      parameters:
+        mode: active-backup
+        primary: eth3
+
+  
+* 5:
+
+sudo iptables -t nat -A PREROUTING -p tcp -s 10.9.9.0/24 --dport 80 -j DNAT --to-destination 10.100.0.8:80
+sudo iptables -t nat -A POSTROUTING -s 10.9.9.0/24 -j MASQUERADE
+
+
+* 6:
+
+timedatectl set-timezone Asia/Singapore
+
+* 7:
+
+  
+* 8:
+
+openssl x509 -in first.crt -noout -text | grep "kodekloud.com"
+
+  
+* 9:
+
+  
+* 10:
+
+  
 * 11:
+
+  
+* 12:
+
+  
+* 13:
+
+  
+* 14:
+
+  
+* 15:
+
+  
+* 16:
+
+  
+* 17:
+
+
 
 

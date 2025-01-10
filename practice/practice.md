@@ -1,6 +1,6 @@
 # ExamPractice
 
-## LFCS Mock Exam 1:
+## 1:
 
 * 1:
 ls -ld /opt
@@ -111,7 +111,7 @@ sudo nano /etc/exports
 
 
 
-## LFCS Mock Exam 2:
+## 2:
 
 * 1:
 
@@ -251,7 +251,7 @@ docker run -d -p 80:80 --name apache_container --restart on-failure:3 httpd
 nslcd
 
 
-## LFCS Mock Exam 3:
+## 3:
 
 * 1:
 
@@ -347,7 +347,7 @@ docker build -f Dockerfile . -t kodekloud/nginx_kodekloud:1.0
 sudo docker run -d -p 81:80 --name kodekloud_webserv kodekloud/nginx_kodekloud:1.0
 
 
-## LFCS Mock Exam 4:
+## 4:
 
 * 1:
 

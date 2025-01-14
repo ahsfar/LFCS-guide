@@ -30,25 +30,8 @@ ulimit -a
 
 * 4:
 sudo useradd -m -s /bin/dash mary
+sudo useradd mary
 sudo passwd mary
-bob@caleston-lp10:~$ sudo adduser mary
-Adding user `mary' ...
-Adding new group `mary' (1006) ...
-Adding new user `mary' (1005) with group `mary' ...
-Creating home directory `/home/mary' ...
-Copying files from `/etc/skel' ...
-New password: 
-Retype new password: 
-passwd: password updated successfully
-Changing the user information for mary
-Enter the new value, or press ENTER for the default
-        Full Name []: 
-        Room Number []: 
-        Work Phone []: 
-        Home Phone []: 
-        Other []: 
-Is the information correct? [Y/n] y
-
 sudo usermod -aG sudo mary
 groups mary
 mary : mary sudo

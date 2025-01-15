@@ -92,6 +92,23 @@ sudo nano /etc/exports
 
 * 11:
 
+  
+* 12:
+
+  
+* 13:
+
+  
+* 14:
+
+  
+* 15:
+
+  
+* 16:
+
+  
+* 17:
 
 
 ## 2:
@@ -328,6 +345,27 @@ COPi index.html /usr/share/nginx/html/index.html
 docker build -f Dockerfile . -t kodekloud/nginx_kodekloud:1.0
 
 sudo docker run -d -p 81:80 --name kodekloud_webserv kodekloud/nginx_kodekloud:1.0
+
+  
+* 11:
+
+  
+* 12:
+
+  
+* 13:
+
+  
+* 14:
+
+  
+* 15:
+
+  
+* 16:
+
+  
+* 17:
 
 
 ## 4:

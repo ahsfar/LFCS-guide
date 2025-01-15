@@ -26,7 +26,7 @@ This is very important if you are not working professionally with linux.
 ## 1. Exam 
 
 - Online Proctored
-- Pending (ETA First half of Jan 2025)
+- Pending (ETA Jan 2025)
 
 
 ## 2. Environment

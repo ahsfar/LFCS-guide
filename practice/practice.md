@@ -9,7 +9,7 @@
 ```bash
 ls -ld /opt
 drwxr-xr-x. 3 root root 4096 Dec 15 17:22 /opt
-`sudo find . -type f -perm u+x | sudo tee /opt/foundthem.txt`
+sudo find . -type f -perm u+x | sudo tee /opt/foundthem.txt
 
 
 find . -type f -perm /4000
@@ -20,6 +20,7 @@ find . -type f -size +1k -exec rsync -R {} /opt/ \;
 ```
 
 * 2:
+```bash
 sudo nano script.sh 
 #!/bin/bash
 cp -R /var/www/ /opt/www-backup/
@@ -27,14 +28,18 @@ cp -R /var/www/ /opt/www-backup/
 crontab -e
 sudo nano /etc/crontab
 0 4 * * *  root  /opt/script.sh
+```
 
 * 3: 
+```bash
 sudo nano /etc/security/limits.conf 
 @john           hard    nproc          30
 @jane           soft    fsize           1024
 ulimit -a
+```
 
 * 4:
+```bash
 sudo useradd -m -s /bin/dash mary
 sudo useradd mary
 sudo passwd mary
@@ -46,39 +51,47 @@ sudo usermod -s /bin/bash mary
 usermod: no changes
 grep '^mary:' /etc/passwd
 mary:x:1005:1005:,,,:/home/mary:/bin/bash
+```
 
 * 5:
+```bash
 ls /proc/sys/kernel/
 sysctl -a
 sudo sysctl -w vm.swappiness=10
 sudo cat /etc/sysctl.conf
-
+```
 
 * 6:
+```bash
 sudo nano /etc/fstab
 /dev/vdb1 /backups xfs  defaults 0 0 
 
 mount
 sudo unmount /dev/vdb2 /mnt
 sudo mount /dev/vdb2 /mnt -o ro
-
+```
 
 * 7:
+```bash
 sudo pvcreate /dev/vdc /dev/vdd
 sudo pvdisplay
 sudo vgcreate volume1 /dev/vdd
 sudo vgdisplay
 sudo vgextend volume1 /dev/vdd
 sudo lvcreate -n website_files -L 3G volume1
+```
 
 * 8:
 
+```bash
 git init
 git remote add origin https://github.com/kodekloudhub/git-for-beginners-course.git
 git pull origin master
-
+```
 
 * 9:
+
+```bash
 docker ps
 docker stop 
 docker ps -a
@@ -88,13 +101,14 @@ docker images
 docker build -f Dockerfile . -t kodekloudwebserv
 docker run kodekloudwebserv
 docker run -d --publish 8081:80 --name webserver2 kodekloudwebserv
-
+```
 
 * 10:
 
+```bash
 sudo nano /etc/exports
 /home 10.0.0.0/24(ro)
-
+```
 
 * 11:
 

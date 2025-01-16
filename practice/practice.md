@@ -112,28 +112,51 @@ sudo nano /etc/exports
 
 * 11:
 
-  
+```bash
+
+```
+
 * 12:
 
+```bash
+
+```
   
 * 13:
 
+```bash
+
+```
   
 * 14:
 
+```bash
+
+```
   
 * 15:
 
-  
+ ```bash
+
+```
+ 
 * 16:
 
+```bash
+
+```
   
 * 17:
 
+```bash
+
+```
 
 ## 2:
 
 * 1:
+
+```bash
 
 sudo nano /etc/systemd/timesyncd.conf
 NTP=0.europe.pool.ntp.org 1.europe.pool.ntp.org
@@ -146,23 +169,32 @@ timedatectl list-timezones | grep -i bucharest
 timedatectl --help
 sudo timedatectl set-timezone Europe/Bucharest
 
+```
+
 * 2:
 
+```bash
 sudo crontab -e -u john
 
 0 4 * * 3 find /home/john/ -type d -empty -delete
 
 sudo crontab -l -u john
 
+```
+
 * 3:
+
+```bash
 
 ip a | grep -i 10.5.5.2
 sudo nano /opt/interface.txt
 
 sudo sh -c "ip a | grep -i 10.5.5.2 | awk '{print $NF}' > /opt/interface.txt"
 
-* 4:
+```
 
+* 4:
+```bash
 groups jane
 sudo usermod -g jane jane
 sudo usermod -aG sudo jane
@@ -172,14 +204,18 @@ sudo chown jane:jane /home/jane/
 sudo usermod -s /bin/bash jane
 sudo passwd jane
 
+```
 
 * 5:
+
+```bash
 
 sudo iptables -t nat -A PREROUTING -p tcp -s 10.5.5.0/24 --dport 81 -j DNAT --to-destination 192.168.5.2:80
 sudo iptables -t nat -L -n -v
 sudo iptables -t nat -A POSTROUTING -s 10.5.5.0/24 -j MASQUERADE
 sudo apt install iptables-persistent
 
+```
 
 * 6:
 
@@ -368,32 +404,51 @@ sudo docker run -d -p 81:80 --name kodekloud_webserv kodekloud/nginx_kodekloud:1
 
   
 * 11:
+```bash
 
+```
   
 * 12:
+```bash
 
+```
   
 * 13:
+```bash
 
+```
   
 * 14:
+```bash
 
+```
   
 * 15:
+```bash
 
+```
   
 * 16:
+```bash
 
+```
   
 * 17:
+```bash
 
+```
 
 ## 4:
 
 * 1:
 
+```bash
+
+```
   
 * 2:
+
+```bash
 
 sudo usermod -s /bin/bash jane
 grep '^jane:' /etc/passwd
@@ -401,15 +456,21 @@ grep '^jane:' /etc/passwd
 sudo usermod -aG sudo jane
 groups jane
 
+```
   
 * 3:
+
+```bash
 
 sudo crontab -e -u john
 0 3 * * 1,6 tar acf /home/john/www-snapshot.tgz /var/www
 sudo crontab -l -u john
 
+```
   
 * 4:
+
+```bash
 
 network:
   version: 2
@@ -429,51 +490,89 @@ network:
         mode: active-backup
         primary: eth3
 
+```
   
 * 5:
+```bash
 
 sudo iptables -t nat -A PREROUTING -p tcp -s 10.9.9.0/24 --dport 80 -j DNAT --to-destination 10.100.0.8:80
 sudo iptables -t nat -A POSTROUTING -s 10.9.9.0/24 -j MASQUERADE
 
+```
 
 * 6:
 
+```bash
+
 timedatectl set-timezone Asia/Singapore
+
+```
 
 * 7:
 
+```bash
+
+```
   
 * 8:
+```bash
 
 openssl x509 -in first.crt -noout -text | grep "kodekloud.com"
 
+```
   
 * 9:
 
+```bash
+
+```
   
 * 10:
 
+```bash
+
+```
   
 * 11:
 
+```bash
+
+```
   
 * 12:
 
+```bash
+
+```
   
 * 13:
 
+```bash
+
+```
   
 * 14:
 
-  
+```bash
+
+```
+ 
 * 15:
 
+```bash
+
+```
   
 * 16:
 
+```bash
+
+```
   
 * 17:
 
 
+```bash
 
+```
 

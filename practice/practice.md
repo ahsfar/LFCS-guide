@@ -219,35 +219,46 @@ sudo apt install iptables-persistent
 
 * 6:
 
+```bash
 openssl x509 -in file* -noout -text
 openssl x509 -in file* -noout -text | grep "Public-Key"
+```
+
 
 * 7:
 
+```bash
 ls -l /opt/
 sudo setfacl --modify janet:rw /opt/aclfile
 
 https://www.redhat.com/en/blog/access-control-lists#:~:text=What%20is%20an%20ACL%3F,part%20of%20a%20demo%20group.
+```
+
 
 * 8:
 
+```bash
 sudo nano /etc/security/limits.conf
 
 janet            hard    nproc           100
 @mail            soft    fsize           8192
+```
 
 
 * 9:
 
+```bash
 touch file1
 git add .
 git commit -m "Created first required file"
 git status
 git push origin master
+```
 
 
 * 10:
 
+```bash
 getenforce
 sestatus
 
@@ -262,48 +273,71 @@ sudo restorecon /usr/bin/less
 ls -lZ /usr/bin/less
 -rwxr-xr-x. 1 root root system_u:object_r:bin_t:s0 199048 Feb 20  2024 /usr/bin/less
 
+```
+
 * 11:
 
+```bash
 sudo systemctl status nginx
 sudo systemctl start nginx
 sudo systemctl enable nginx
+```
+
 
 
 * 12:
 
+```bash
 sudo vgextend volume1 /dev/vdc
 sudo lvresize --size 2G /dev/volume1/lv1
+```
+
 
 * 13:
 
+```bash
 https://hpc.ncsu.edu/Documents/unixtut/unix7.html
+```
+
 
 
 
 * 14:
 
+```bash
 virt-install --name mockexam2 --memory=1024 --vcpu=1 --disk=/var/lib/libvirt/images/ubuntu.img --os-variant=ubuntu22.04 --noautoconsole --import
 
 virsh list -all
 virsh autostart mockexam2
+```
+
 
 * 15:
 
+```bash
 bridge.yaml
 
 
 sudo netplan apply
+```
+
 
 * 16:
 
+```bash
 docker rmi nginx -f
 docker images
 
 docker run -d -p 80:80 --name apache_container --restart on-failure:3 httpd
+```
+
 
 
 * 17:
 
+```bash
+
+```
 nslcd
 
 
@@ -311,6 +345,7 @@ nslcd
 
 * 1:
 
+```bash
 sudo rm /etc/nginx/sites-enabled/default
 
 sudo nano /etc/nginx/sites-available/proxy.conf
@@ -320,15 +355,21 @@ proxy_pass http://google.com;
 sudo ln -s /etc/nginx/sites-available/proxy.conf /etc/nginx/sites-enabled/proxy.conf
 
 sudo systemctl reload nginx.service
+```
+
 
 
 * 2:
 
+```bash
 sudo nano /etc/crontab 
 0 4 15 * *       su - mary -c  'find /home/mary/ -type d -empty -delete'
+```
+
 
 * 3:
 
+```bash
 sudo vim /etc/netplan/extrainterface.yaml
 
 network:
@@ -347,16 +388,22 @@ sudo netplan apply
 ip route
 
 sudo ip addr add 10.5.0.9/24 dev enp0s10
+```
+
 
 * 4:
 
+```bash
 sudo sysctl -w vm.swappiness=30
 
 sudo nano /etc/sysctl.conf
 vm.dirty_ratio=15
+```
+
 
 * 5:
 
+```bash
 sudo groupadd developers
 sudo useradd jane
 sudo usermod -g developers jane
@@ -364,36 +411,51 @@ groups jane
 sudo usermod -aG jane jane
 sudo usermod -aG sudo jane
 sudo usermod -s /bin/bash jane
+```
+
 
 * 6:
 
+```bash
 sudo nano /etc/ssh/sshd_config
 
 PasswordAuthentication no
 
 Match User john
   PasswordAuthentication yes
+```
+
 
 * 7:
 
+```bash
 find /usr -type f -size +1G
 sudo find /usr -type f -size +1G -exec rm {} \;
+```
+
 
 * 8:
 
+```bash
 sudo vgcreate VG1 /dev/vdb /dev/vdc
 sudo vgdisplay
 sudo pvdisplay
 sudo lvcreate -L 6G VG1 --name LV1
 sudo lvdisplay
+```
+
 
 * 9:
 
+```bash
 sudo iptables -t nat -A PREROUTING -s 10.11.12.0/24 -d 10.9.9.1 
 sudo iptables -t nat -A POSTROUTING -s 10.11.12.0/24 -j MASQUERADE
+```
+
 
 * 10:
 
+```bash
 cat Dockerfile 
 FROM nginx
 COPi index.html /usr/share/nginx/html/index.html
@@ -401,6 +463,8 @@ COPi index.html /usr/share/nginx/html/index.html
 docker build -f Dockerfile . -t kodekloud/nginx_kodekloud:1.0
 
 sudo docker run -d -p 81:80 --name kodekloud_webserv kodekloud/nginx_kodekloud:1.0
+```
+
 
   
 * 11:

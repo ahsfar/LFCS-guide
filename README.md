@@ -21,8 +21,8 @@ This guide cannot be considered as unique source of information to prepare LFCS 
 * Duration of Exam **2 hours** & exams consist of **17-20** performance-based tasks.
 * Includes 12 Month Exam Eligibility with one retake
 * Price: $395 USD - Normally there are discounts and bundle offers 
-* Performance-Based Exam -> The exams are delivered online and consist of performance-based tasks (problems) to be solved on the command line running Linux.
-* Exam simulator - online proctored via streaming audio, video, and screen sharing feeds.
+* Performance-Based Exam -> Consist of problems to be solved on the command line running Linux.
+* Exam simulator - Online proctored via streaming audio, video, and screen sharing feeds.
 * 2 Years (Validity)
 
 - [Official LFCS Exam Info Link](https://training.linuxfoundation.org/certification/linux-foundation-certified-sysadmin-lfcs/)

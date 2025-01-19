@@ -1,7 +1,7 @@
 # ExamPractice
 
 ### It's for Exam Practice. Still in Progress... 
-
+(Internal notes: It'll all be merged into a single set of lenghty questions ... )
 ## Set 1:
 
 * 1:

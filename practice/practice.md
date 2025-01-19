@@ -2,7 +2,7 @@
 
 ### It's for Exam Practice. Still in Progress... 
 
-## 1:
+## Set 1:
 
 * 1:
 
@@ -152,7 +152,7 @@ sudo nano /etc/exports
 
 ```
 
-## 2:
+## Set 2:
 
 * 1:
 
@@ -341,7 +341,7 @@ docker run -d -p 80:80 --name apache_container --restart on-failure:3 httpd
 nslcd
 
 
-## 3:
+## Set 3:
 
 * 1:
 
@@ -502,7 +502,7 @@ sudo docker run -d -p 81:80 --name kodekloud_webserv kodekloud/nginx_kodekloud:1
 
 ```
 
-## 4:
+## Set 4:
 
 * 1:
 

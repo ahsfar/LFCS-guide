@@ -1,5 +1,8 @@
 #!/bin/bash
 # Usage: ./user_management.sh [create|delete|update|list|info] username
+# https://linuxscriptshub.com/essential-linux-scripts/ <-- script was found from this site but added couple of things in this:
+# User Existence Check, User Creation with Home Directory, Listing Users, User Information, Error Handling.
+
 
 ACTION=$1
 USERNAME=$2

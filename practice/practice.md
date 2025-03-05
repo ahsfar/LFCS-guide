@@ -317,6 +317,20 @@ virsh autostart mockexam2
 ```bash
 bridge.yaml
 
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    eth1:
+      dhcp4: no
+    eth2:
+      dhcp4: no
+  bridges:
+    bridge1:
+      dhcp4: yes
+      interfaces:
+        - eth1
+        - eth2
 
 sudo netplan apply
 ```

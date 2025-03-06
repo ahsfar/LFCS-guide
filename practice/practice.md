@@ -489,6 +489,9 @@ sudo docker run -d -p 81:80 --name kodekloud_webserv kodekloud/nginx_kodekloud:1
 * 12:
 ```bash
 
+
+/etc/fstab
+
 ```
   
 * 13:

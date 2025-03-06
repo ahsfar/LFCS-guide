@@ -483,40 +483,86 @@ sudo docker run -d -p 81:80 --name kodekloud_webserv kodekloud/nginx_kodekloud:1
   
 * 11:
 ```bash
+cd kode
 
+git pull origin master
+
+sudo nano file1
+line2
+
+git add .
+git commit -m "Added line2 to our project"
+
+git push origin master
 ```
   
 * 12:
 ```bash
+sudo mkfs.ext4 /dev/vdd
 
+sudo nano /etc/fstab
 
-/etc/fstab
+/dev/vdd /home/bob/backups ext4 defaults 0 2
+
+sudo mount -a
 
 ```
   
 * 13:
 ```bash
+top
+
+sudo kill
+
+sudo rm script.sh
 
 ```
   
 * 14:
 ```bash
 
+sudo find /file/path/ -type f -size +500 -exec rm {} \;
+
 ```
   
 * 15:
 ```bash
+top
+
+sudo kill id
 
 ```
   
 * 16:
 ```bash
+sudo apt install systemd-timesyncd
 
+sudo systemctl status systemd-timesyncd
+
+sudo nano /etc/systemd/timesyncd.conf 
+
+[Time]
+NTP=0.asia.pool.ntp.org 1.asia.pool.ntp.org 2.asia.pool.ntp.org 3.asia.pool.ntp.org
+
+sudo systemctl restart systemd-timesyncd
 ```
   
 * 17:
 ```bash
 
+bob@node01:~$ lsblk
+NAME   MAJ:MIN RM SIZE RO TYPE MOUNTPOINTS
+nbd0    43:0    0   2G  0 disk /share
+
+sudo umount /share
+
+sudo nbd-client -d /dev/nbd0
+
+sudo nbd-client -l 127.0.0.1
+
+sudo nbd-client 127.0.0.1 -N disk2
+
+sudo mount /dev/nbd0 /mnt
 ```
 
 ## Set 4:

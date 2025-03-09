@@ -614,21 +614,41 @@ sudo mount /dev/nbd0 /mnt
 
 ```bash
 
+sudo kill id
+
 ```
   
 * 2:
 
 ```bash
 
+sudo nano /etc/nginx/sites-available/loadbalancer.conf
+
+server ip_addr weight=3;
+
+sudo nginx -t
+
+sudo ln -s /etc/nginx/sites-available/loadbalancer.conf /etc/nginx/sites-enabled/loadbalancer.conf
+
+sudo systemctl reload nginx
+
+```
+  
+* 3:
+
+```bash
+
+cat /etc/passwd
 sudo usermod -s /bin/bash jane
 grep '^jane:' /etc/passwd
 
 sudo usermod -aG sudo jane
 groups jane
 
+
 ```
   
-* 3:
+* 4:
 
 ```bash
 
@@ -638,8 +658,7 @@ sudo crontab -l -u john
 
 ```
   
-* 4:
-
+* 5:
 ```bash
 
 network:
@@ -660,13 +679,7 @@ network:
         mode: active-backup
         primary: eth3
 
-```
-  
-* 5:
-```bash
-
-sudo iptables -t nat -A PREROUTING -p tcp -s 10.9.9.0/24 --dport 80 -j DNAT --to-destination 10.100.0.8:80
-sudo iptables -t nat -A POSTROUTING -s 10.9.9.0/24 -j MASQUERADE
+sudo netplan apply
 
 ```
 
@@ -674,7 +687,8 @@ sudo iptables -t nat -A POSTROUTING -s 10.9.9.0/24 -j MASQUERADE
 
 ```bash
 
-timedatectl set-timezone Asia/Singapore
+sudo iptables -t nat -A PREROUTING -p tcp -s 10.9.9.0/24 --dport 80 -j DNAT --to-destination 10.100.0.8:80
+sudo iptables -t nat -A POSTROUTING -s 10.9.9.0/24 -j MASQUERADE
 
 ```
 
@@ -682,12 +696,26 @@ timedatectl set-timezone Asia/Singapore
 
 ```bash
 
+sudo timedatectl set-ntp true
+
+timedatectl set-timezone Asia/Singapore
+
+sudo timedatectl show-timesync | grep FallbackNTP
+
+sudo systemctl restart systemd-timesyncd
+
 ```
   
 * 8:
 ```bash
 
-openssl x509 -in first.crt -noout -text | grep "kodekloud.com"
+git status
+
+git add .
+
+git commit -m "Initial commit of project1"
+
+git push origin master
 
 ```
   
@@ -695,11 +723,17 @@ openssl x509 -in first.crt -noout -text | grep "kodekloud.com"
 
 ```bash
 
+openssl x509 -in /home/bob/certs/third* -noout -text | grep "kodekloud.com"
+
+sudo rm /home/bob/certs/first*
+
 ```
   
 * 10:
 
 ```bash
+
+sudo lvresize --extents 100%VG VG1/LV1
 
 ```
   
@@ -707,11 +741,23 @@ openssl x509 -in first.crt -noout -text | grep "kodekloud.com"
 
 ```bash
 
+docker ps -a
+
+docker rm 63 -f
+
 ```
   
 * 12:
 
 ```bash
+
+sudo mkfs.ext4 /dev/vdc
+
+sudo nano /etc/fstab
+
+/dev/vdc /home/bob/share ext4 defaults 0 2
+
+sudo mount -a
 
 ```
   
@@ -719,11 +765,21 @@ openssl x509 -in first.crt -noout -text | grep "kodekloud.com"
 
 ```bash
 
+sudo nano /etc/sysctl.conf
+
+net.ipv6.conf.all.forwarding = 1
+
+sudo sysctl --system
+
 ```
   
 * 14:
 
 ```bash
+
+sudo semanage fcontext -a -t httpd_sys_content_t "/var/www(/.*)?"
+
+sudo restorecon -Rv /var/www/
 
 ```
  
@@ -731,11 +787,19 @@ openssl x509 -in first.crt -noout -text | grep "kodekloud.com"
 
 ```bash
 
+find /opt/archive/ -type f -perm /u=x
+
+sudo rm /opt/archive/file43492
+
 ```
   
 * 16:
 
 ```bash
+
+df -h
+
+sudo find /mnt -type f -exec ls -s {} + | sort -n -r | head -1 | awk '{print $2}' | xargs sudo rm -f
 
 ```
   
@@ -743,6 +807,8 @@ openssl x509 -in first.crt -noout -text | grep "kodekloud.com"
 
 
 ```bash
+
+sudo swapoff /additionalspace
 
 ```
 

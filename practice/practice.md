@@ -114,29 +114,60 @@ sudo nano /etc/exports
 
 ```bash
 
+sudo lsof -i :80
+
+pgrep -a nginx
+
 ```
 
 * 12:
 
 ```bash
+sudo ip addr add 10.5.0.1/24 dev eth1
+
+ip route show default
+
+cat /etc/resolv.conf
 
 ```
   
 * 13:
 
 ```bash
-
+lsblk	                  List block devices and partitions.
+fdisk /dev/vdb	        Partition a disk.
+mkfs.ext4 /dev/vdb1	    Format a partition with ext4 file system.
+mount /dev/vdb1 /mnt	  Mount a partition to a directory.
+umount /mnt	            Unmount a partition.
+fsck /dev/vdb1	        Check and repair a file system.
+resize2fs /dev/vdb1	    Resize an ext2/ext3/ext4 file system.
 ```
   
 * 14:
 
 ```bash
+sudo fallocate -l 1024M /swfile
+
+sudo chmod 600 /swfile
+
+sudo mkswap /swfile
+
+sudo swapon /swfile
+
+/swfile none swap sw 0 0
 
 ```
   
 * 15:
 
  ```bash
+Run the sudo dstat --top-io --top-bio command to get the process name with I/O activity.
+Run the pgrep python3 command to get the PID of the process.
+Run sudo lsof -p <PID> to list the open files by the process.
+Run sudo lsof -p <PID> | awk '{print $9}' | while read file; do df $file; done to get the device details.
+Find the actual partition used by running the pvs command and store the actual device name in /opt/devname.txt.
+
+sudo pidstat -d 1
 
 ```
  
@@ -144,11 +175,23 @@ sudo nano /etc/exports
 
 ```bash
 
+bob@node01:~$ sudo find /data -type f -exec du -h {} + | sort -rh | head -n 1
+196M    /data/683/lf
+
+sudo rm -rf /data/683/lf
+
 ```
   
 * 17:
 
 ```bash
+
+/etc/ssh/sshd_config
+
+X11Forwarding no
+
+Match User bob
+    X11Forwarding yes
 
 ```
 

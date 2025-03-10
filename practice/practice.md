@@ -21,7 +21,7 @@ find . -type f -size +1k -exec rsync -R {} /opt/ \;
 ```bash
 sudo nano script.sh 
 #!/bin/bash
-cp -R /var/www/ /opt/www-backup/
+cp -a /var/www/ /opt/www-backup/
 
 crontab -e
 sudo nano /etc/crontab

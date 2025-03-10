@@ -106,6 +106,8 @@ docker run -d --publish 8081:80 --name webserver2 kodekloudwebserv
 ```bash
 sudo nano /etc/exports
 /home 10.0.0.0/24(ro)
+
+sudo exportfs -ra
 ```
 
 * 11:

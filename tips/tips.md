@@ -2,7 +2,7 @@
 
 Following or some helpful tips I've noticed while preparing for LFCS Exam.
 
-## 1. Practice (Do the Killer.sh exams)
+## 1. Practice (Do the Killer.sh mock exams)
 
 - Practice commands and arguments and know the tools. Do linux challenges labs or practice exams e.g. from KodeKloud.
 - I would recommend installing Linux distro VM in your personal machine if you don't have one already and play around with that just get comfortable and use all the commands while practicing.
@@ -33,7 +33,7 @@ This is very important if you are not working professionally with linux.
 
 ## 2. Environment
 
-Link will be active PSI Bridge secure browser before the exam. It's similar to Killer.sh mock exams. 
+### Link will be active "PSI Bridge secure browser" before the exam. It's similar to Killer.sh mock exams. 
 
 
 [Badge](https://www.credly.com/badges//public_url)

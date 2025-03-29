@@ -20,6 +20,7 @@ Learn how to search for commands by using man -k keyword or man -K keyword. Get 
 This is very important if you are not working professionally with linux.
 - Practice as much as possible (Time yourself)
 - When you book exam you get killer.sh two sessions that's very similar to actual exam format. (It's generally harder than real exam)
+- 36 hours to try the mock exams as many time as you want and Questions and Answers will be available after the exam attempt is finished.
 
 #  Experience - Pending
 

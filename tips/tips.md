@@ -2,7 +2,7 @@
 
 Following or some helpful tips I've noticed while preparing for LFCS Exam.
 
-## 1. Practice
+## 1. Practice (Do the Killer.sh exams)
 
 - Practice commands and arguments and know the tools. Do linux challenges labs or practice exams e.g. from KodeKloud.
 - I would recommend installing Linux distro VM in your personal machine if you don't have one already and play around with that just get comfortable and use all the commands while practicing.
@@ -26,12 +26,14 @@ This is very important if you are not working professionally with linux.
 ## 1. Exam 
 
 - Online Proctored
-- Pending (ETA Jan 2025)
+- First attempt - 56% needed 67% (I was weak on Operations deployment, network and storage section as per exam results.)
+- I had 17 questions. I was able to attempt all the questions in the given time.
+- 2nd attempt Pending (ETA April 2025)
 
 
 ## 2. Environment
 
-Pending 
+Link will be active PSI Bridge secure browser before the exam. It's similar to Killer.sh mock exams. 
 
 
 [Badge](https://www.credly.com/badges//public_url)

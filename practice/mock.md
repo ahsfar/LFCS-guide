@@ -1,5 +1,5 @@
-#Mock
+#Mock temporary file
 
-Useful commands i found during the practice and exam will be added here
+Useful commands or approaches i found during the practice and exam will be added here
 
 

@@ -42,7 +42,7 @@ LVM Storage
 Regex, filter out log lines
 
 
-#!/bin/bash
+```bash
 # =====================================================================
 # LFCS Exam Cheat Sheet - Comprehensive Command Reference
 # =====================================================================
@@ -211,7 +211,7 @@ awk '/pattern/ {print $1}' logfile    # Extract specific fields
 # 4. Verify commands with test cases
 # 5. Backup config files before editing
 # =====================================================================
-
+```
 User and Group limits
 
 

@@ -214,6 +214,198 @@ awk '/pattern/ {print $1}' logfile    # Extract specific fields
 # =====================================================================
 ```
 
+Essential Linux Directories & Config Files for LFCS Exam
+(Focus on practical usage and exam relevance)
+
+1. System Configuration & Boot
+/etc/fstab
+
+Purpose: Persistent filesystem mounting
+
+Exam Use: Add/verify entries for automatic mounting
+
+bash
+/dev/sdb1  /data  ext4  defaults  0 0
+/etc/default/grub
+
+Purpose: GRUB bootloader configuration
+
+Exam Use: Modify kernel parameters, set default OS
+
+bash
+GRUB_TIMEOUT=5
+GRUB_CMDLINE_LINUX="console=tty0 console=ttyS0,115200"
+/boot/grub2/grub.cfg
+
+Purpose: Actual GRUB config (don't edit directly!)
+
+Exam Use: Verify settings after running sudo update-grub
+
+2. User Management
+/etc/passwd
+
+Purpose: User account information
+
+Exam Use: Verify UID/GID, shell, home directory
+
+bash
+alice:x:1001:1001:Alice User:/home/alice:/bin/bash
+/etc/shadow
+
+Purpose: Secure user password storage
+
+Exam Use: Reset passwords (sudo passwd user), check expiration
+
+/etc/group
+
+Purpose: Group definitions
+
+Exam Use: Add users to groups (sudo usermod -aG group user)
+
+/etc/sudoers
+
+Purpose: Sudo privileges configuration
+
+Exam Use: Grant admin access (always use visudo!)
+
+bash
+%admin  ALL=(ALL) NOPASSWD: ALL
+3. Networking
+/etc/netplan/ (Ubuntu)
+
+Purpose: Network configuration (YAML files)
+
+Exam Use: Configure static IP
+
+yaml
+network:
+  ethernets:
+    eth0:
+      addresses: [192.168.1.10/24]
+      gateway4: 192.168.1.1
+      nameservers:
+        addresses: [8.8.8.8]
+/etc/sysconfig/network-scripts/ (RHEL/CentOS)
+
+Purpose: Network interface configs
+
+Exam Use: Edit ifcfg-eth0 for static IP
+
+/etc/hosts
+
+Purpose: Local hostname resolution
+
+Exam Use: Add hostname mappings
+
+bash
+192.168.1.20  server1.lab  server1
+/etc/resolv.conf
+
+Purpose: DNS resolver configuration
+
+Exam Use: Set nameservers (often auto-generated)
+
+bash
+nameserver 1.1.1.1
+4. Service Management
+/etc/systemd/system/
+
+Purpose: Custom service unit files
+
+Exam Use: Create custom services
+
+bash
+[Unit]
+Description=My Service
+[Service]
+ExecStart=/usr/bin/myscript.sh
+[Install]
+WantedBy=multi-user.target
+/etc/ssh/sshd_config
+
+Purpose: SSH server configuration
+
+Exam Use: Disable root login, change port
+
+bash
+Port 2222
+PermitRootLogin no
+5. Logging
+/var/log/
+
+Purpose: System and application logs
+
+Key Files:
+
+syslog/messages: General system logs
+
+auth.log/secure: Authentication logs
+
+boot.log: System startup messages
+
+Exam Use: Troubleshoot issues with journalctl or grep
+
+6. Cron & Automation
+/etc/crontab
+
+Purpose: System-wide cron jobs
+
+Exam Use: Schedule root-level tasks
+
+bash
+0 3 * * * root /backup.sh
+/etc/cron.d/
+
+Purpose: Additional cron job files
+
+Exam Use: Create modular cron configurations
+
+/var/spool/cron/
+
+Purpose: User-specific crontabs (use crontab -e instead!)
+
+7. Package Management
+/etc/apt/sources.list (Debian/Ubuntu)
+
+Purpose: Software repositories
+
+Exam Use: Add/remove repositories
+
+/etc/yum.repos.d/ (RHEL/CentOS)
+
+Purpose: YUM/DNF repository configs
+
+Exam Use: Create custom .repo files
+
+8. Kernel & Hardware
+/proc/ (Virtual Filesystem)
+
+Key Files:
+
+/proc/cpuinfo: CPU details
+
+/proc/meminfo: Memory usage
+
+/proc/mounts: Mounted filesystems
+
+Exam Use: Check hardware info without external tools
+
+/sys/ (Virtual Filesystem)
+
+Purpose: Kernel device management
+
+Exam Use: Configure devices at runtime
+
+9. Temporary Files
+/tmp/
+
+Purpose: Temporary files (cleared on reboot)
+
+Exam Use: Store transient data
+
+/var/tmp/
+
+Purpose: Persistent temporary files
 
 
 

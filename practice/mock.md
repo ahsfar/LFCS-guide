@@ -214,15 +214,13 @@ awk '/pattern/ {print $1}' logfile    # Extract specific fields
 # =====================================================================
 ```
 
-Essential Linux Directories & Config Files for LFCS Exam
-(Focus on practical usage and exam relevance)
+## Essential Linux Directories & Config Files for LFCS Exam
 
 1. System Configuration & Boot
-/etc/fstab
+`/etc/fstab`
 
-Purpose: Persistent filesystem mounting
-
-Exam Use: Add/verify entries for automatic mounting
+**Purpos**e: Persistent filesystem mounting
+**Exam Use**: Add/verify entries for automatic mounting
 
 bash
 /dev/sdb1  /data  ext4  defaults  0 0

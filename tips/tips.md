@@ -30,7 +30,7 @@ This is very important if you are not working professionally with linux.
 - Online Proctored
 - First attempt - 56% needed 67% (I was weak on Operations deployment, network and storage section as per exam results.)
 - I had 17 questions. I was able to attempt all the questions in the given time.
-- 2nd attempt Pending (ETA early June)
+- 2nd attempt Pending (TBA)
 
 
 ## 2. Environment
